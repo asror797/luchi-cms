@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wellness Programs — Diary of a Breastie</title>
+  <meta name="description" content="Gut health coaching programs for breast cancer survivors and women — personalized 1:1 coaching, organizational wellness partnerships, and holistic healing from the inside out.">
+  <meta name="keywords" content="gut health coaching, breast cancer recovery, wellness program, survivor coaching, women's health, organizational wellness, Diary of a Breastie">
+  <meta name="author" content="Diary of a Breastie">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diaryofabreastie.com/programs">
+  <meta property="og:title" content="Wellness Programs — Gut Health Coaching for Survivors & Women">
+  <meta property="og:description" content="Personalized gut health coaching for breast cancer survivors and women. Healing from the inside out.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diaryofabreastie.com/programs">
+  <meta property="og:site_name" content="Diary of a Breastie">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wellness Programs — Gut Health Coaching">
+  <meta name="twitter:description" content="Personalized gut health coaching for breast cancer survivors and women.">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1a1a1a; background: #fff; }
+    .page-wrapper { margin: 0 auto; background: #fff; padding-top: 52px; min-height: 100vh; display: flex; flex-direction: column; }
+
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px max(28px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; position: fixed; top: 0; left: 0; width: 100%; background: #fff; z-index: 100; }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 15px; text-decoration: none; color: #1a1a1a; }
+    .nav-logo span { font-style: italic; color: #D85A8A; }
+    .nav-links { display: flex; gap: 20px; list-style: none; font-size: 13px; color: #666; }
+    .nav-links a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+    .nav-links a:hover { color: #D85A8A; }
+    .nav-links .active { color: #D85A8A; font-weight: 500; }
+    .nav-cta { background: #D85A8A; color: white; border: none; padding: 8px 16px; border-radius: 20px; font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.3s ease, transform 0.2s ease; text-decoration: none; display: inline-block; }
+    .nav-cta:hover { background: #c44d7a; transform: scale(1.03); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; }
+
+    .page-hero { padding: 48px max(32px, calc((100% - 960px) / 2)) 40px; background: #FCF0F5; border-bottom: 0.5px solid #e0e0e0; text-align: center; animation: fadeInUp 0.6s ease; }
+    .page-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
+    .page-h1 { font-family: 'DM Serif Display', serif; font-size: 38px; line-height: 1.1; margin-bottom: 14px; }
+    .page-h1 em { font-style: italic; color: #D85A8A; }
+    .page-sub { font-size: 14px; color: #555; max-width: 520px; line-height: 1.7; margin: 0 auto 10px; }
+    .accepting-badge { display: inline-block; background: #EAF3DE; color: #3B6D11; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-top: 16px; }
+
+    .tracks-wrap { border-bottom: 0.5px solid #e0e0e0; }
+    .tracks { display: grid; grid-template-columns: 1fr 1fr 1fr; max-width: 960px; margin: 0 auto; }
+    .track { padding: 40px 28px; border-right: 0.5px solid #e0e0e0; transition: background 0.3s ease; }
+    .track:last-child { border-right: none; }
+    .track-tag { display: inline-block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .tag-pink { background: #F4C0D1; color: #72243E; }
+    .tag-neutral { background: #f7f7f5; color: #666; border: 0.5px solid #e0e0e0; }
+    .tag-teal { background: #E1F5EE; color: #0F6E56; }
+    .track-h { font-family: 'DM Serif Display', serif; font-size: 22px; line-height: 1.2; margin-bottom: 10px; }
+    .track-desc { font-size: 13px; color: #555; line-height: 1.7; margin-bottom: 20px; }
+    .track-includes-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #666; margin-bottom: 10px; }
+    .include-item { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; font-size: 13px; line-height: 1.5; }
+    .check { width: 16px; height: 16px; border-radius: 50%; background: #D85A8A; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .check.teal { background: #1D9E75; }
+    .track-cta { display: inline-block; color: white; border: none; padding: 11px 22px; border-radius: 22px; font-size: 13px; font-family: 'DM Sans', sans-serif; cursor: pointer; margin-top: 16px; transition: background 0.3s ease, transform 0.2s ease; }
+    .track-cta:hover { transform: scale(1.03); }
+    .track-cta.pink { background: #D85A8A; }
+    .track-cta.pink:hover { background: #c44d7a; }
+    .track-cta.outline { background: transparent; color: #D85A8A; border: 0.5px solid #D85A8A; }
+    .track-cta.outline:hover { background: #FCF0F5; }
+    .track-cta.teal { background: #1D9E75; }
+    .track-cta.teal:hover { background: #178a66; }
+
+    .nonprofit-band { background: #f7f7f5; border-bottom: 0.5px solid #e0e0e0; padding: 32px max(32px, calc((100% - 960px) / 2)); display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+    .nb-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #0F6E56; margin-bottom: 8px; }
+    .nb-h { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
+    .nb-body { font-size: 13px; color: #555; line-height: 1.6; max-width: 580px; }
+    .nb-stats { display: flex; gap: 24px; }
+    .nb-stat { text-align: center; }
+    .nb-stat-num { font-family: 'DM Serif Display', serif; font-size: 28px; color: #1D9E75; }
+    .nb-stat-label { font-size: 11px; color: #666; }
+
+    .section { padding: 36px max(32px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; }
+    .section-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 8px; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 6px; }
+    .section-sub { font-size: 13px; color: #666; margin-bottom: 24px; }
+
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .step { padding: 20px; border-right: 0.5px solid #e0e0e0; }
+    .step:last-child { border-right: none; }
+    .step-num { font-size: 28px; font-family: 'DM Serif Display', serif; color: #F4C0D1; margin-bottom: 8px; }
+    .step-title { font-size: 13px; font-weight: 500; margin-bottom: 6px; }
+    .step-desc { font-size: 12px; color: #666; line-height: 1.5; }
+
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .testi { background: #f7f7f5; border-radius: 12px; padding: 18px; border: 0.5px solid #e0e0e0; transition: transform 0.2s ease; }
+    .testi:hover { transform: translateY(-2px); }
+    .testi-quote { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+    .testi-name { font-size: 12px; color: #D85A8A; }
+
+    .faq-item { padding: 16px 0; border-bottom: 0.5px solid #e0e0e0; max-width: 680px; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+    .faq-a { font-size: 13px; color: #555; line-height: 1.6; }
+
+    .cta-bar { background: #FCF0F5; padding: 40px max(32px, calc((100% - 960px) / 2)); text-align: center; }
+    .cta-h { font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 8px; }
+    .cta-sub { font-size: 13px; color: #666; margin-bottom: 20px; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-btn { padding: 13px 26px; border-radius: 22px; font-size: 14px; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; }
+    .cta-btn.pink { background: #D85A8A; color: white; border: none; }
+    .cta-btn.pink:hover { background: #c44d7a; transform: scale(1.03); }
+    .cta-btn.outline { background: transparent; color: #D85A8A; border: 0.5px solid #D85A8A; }
+    .cta-btn.outline:hover { background: #FCF0F5; transform: scale(1.03); }
+
+    /* FOOTER */
+    .footer { margin-top: auto; padding: 24px max(32px, calc((100% - 960px) / 2)); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 15px; color: #1a1a1a; text-decoration: none; }
+    .footer-logo span { font-style: italic; color: #D85A8A; }
+    .footer-links { display: flex; gap: 16px; }
+    .footer-links a { color: #666; text-decoration: none; font-size: 12px; transition: color 0.2s ease; }
+    .footer-links a:hover { color: #D85A8A; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 16px 28px; gap: 14px; border-bottom: 0.5px solid #e0e0e0; z-index: 99; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+      .nav-links.open { display: flex; }
+      .nav-right { gap: 10px; }
+      .nav-cta { font-size: 11px; padding: 6px 12px; }
+      .nav { padding: 12px 20px; }
+      .page-hero { padding: 32px 20px; }
+      .page-h1 { font-size: 30px; }
+      .tracks { grid-template-columns: 1fr; }
+      .track { border-right: none; border-bottom: 0.5px solid #e0e0e0; padding: 28px 20px; }
+      .track:last-child { border-bottom: none; }
+      .nonprofit-band { grid-template-columns: 1fr; padding: 28px 20px; }
+      .nb-stats { justify-content: center; }
+      .nb-h { font-size: 18px; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .step { border-bottom: 0.5px solid #e0e0e0; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .section { padding: 28px 20px; }
+      .section-title { font-size: 20px; }
+      .cta-bar { padding: 32px 20px; }
+      .cta-h { font-size: 22px; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .footer { flex-direction: column; gap: 12px; text-align: center; padding: 20px; }
+    }
+    @media (max-width: 480px) {
+      .page-h1 { font-size: 26px; }
+      .page-hero { padding: 24px 16px; }
+      .process-steps { grid-template-columns: 1fr; }
+      .section { padding: 24px 16px; }
+      .track { padding: 24px 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+<nav class="nav">
+  <a href="/" class="nav-logo">Diary of <span>A Breastie</span></a>
+  <ul class="nav-links">
+    <li><a href="/listen">Listen</a></li>
+    <li><a href="/library">Breastie Library</a></li>
+    <li><a href="/programs" class="active">Wellness Programs</a></li>
+    <li><a href="/newsletter">Newsletter</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+  <div class="nav-right">
+      <a href="/work-with-me" class="nav-cta">Work With Me</a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-eyebrow">Wellness Programs</div>
+  <h1 class="page-h1">Healing from the <em>inside out.</em></h1>
+  <p class="page-sub">Gut health coaching for individuals and organizations — meeting survivors and women wherever they are on the journey to feeling well.</p>
+  <div class="accepting-badge">Now accepting clients &amp; organizational partners</div>
+</div>
+
+<div class="tracks-wrap">
+<div class="tracks">
+  <div class="track" style="background:#FCF0F5">
+    <span class="track-tag tag-pink">For breast cancer survivors</span>
+    <div class="track-h">Survivor Gut Health Coaching</div>
+    <div class="track-desc">Cancer treatment takes a serious toll on your gut microbiome. This program is designed specifically for breast cancer survivors ready to rebuild their digestive health, restore energy, and feel at home in their bodies again.</div>
+    <div class="track-includes-label">What's included</div>
+    <div class="include-item"><div class="check"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>1:1 personalized coaching sessions</div>
+    <div class="include-item"><div class="check"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Survivor-specific gut health protocol</div>
+    <div class="include-item"><div class="check"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Anti-inflammatory nutrition guidance</div>
+    <div class="include-item"><div class="check"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Lifestyle &amp; movement recommendations</div>
+    <div class="include-item"><div class="check"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Ongoing support between sessions</div>
+    <button class="track-cta pink">Apply now →</button>
+  </div>
+  <div class="track">
+    <span class="track-tag tag-neutral">For all women</span>
+    <div class="track-h">Women's Wellness Gut Health Program</div>
+    <div class="track-desc">You don't have to be a cancer survivor to deserve to feel well. This program is for any woman tired of bloating, fatigue, and hormonal imbalance — ready to get to the root cause and reclaim her energy.</div>
+    <div class="track-includes-label">What's included</div>
+    <div class="include-item"><div class="check"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>1:1 personalized coaching sessions</div>
+    <div class="include-item"><div class="check"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Root-cause gut health assessment</div>
+    <div class="include-item"><div class="check"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Hormone &amp; digestion support plan</div>
+    <div class="include-item"><div class="check"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Nutrition &amp; lifestyle roadmap</div>
+    <div class="include-item"><div class="check"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Ongoing support between sessions</div>
+    <button class="track-cta outline">Apply now →</button>
+  </div>
+  <div class="track">
+    <span class="track-tag tag-teal">For nonprofits &amp; organizations</span>
+    <div class="track-h">Organizational Wellness Partnership</div>
+    <div class="track-desc">Bringing gut health education and coaching to the communities you serve — cancer support organizations, women's health nonprofits, churches, and corporate wellness programs. Every partnership is custom-built.</div>
+    <div class="track-includes-label">This can include</div>
+    <div class="include-item"><div class="check teal"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Group gut health workshops &amp; seminars</div>
+    <div class="include-item"><div class="check teal"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Subsidized 1:1 coaching for members</div>
+    <div class="include-item"><div class="check teal"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Educational content &amp; resource creation</div>
+    <div class="include-item"><div class="check teal"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Ongoing community wellness support</div>
+    <div class="include-item"><div class="check teal"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Custom partnership pricing</div>
+    <button class="track-cta teal">Inquire about a partnership →</button>
+  </div>
+</div>
+</div>
+
+<div class="nonprofit-band">
+  <div>
+    <div class="nb-eyebrow">Organizational partnerships</div>
+    <div class="nb-h">Bringing wellness to the communities that need it most</div>
+    <div class="nb-body">Every nonprofit, cancer support group, church, and organization serves women who deserve access to gut health education and support. Organizational partnerships are fully customized — whether that's a one-time workshop, an ongoing program, or subsidized coaching for your members.</div>
+  </div>
+  <div class="nb-stats">
+    <div class="nb-stat"><div class="nb-stat-num">3</div><div class="nb-stat-label">Program formats</div></div>
+    <div class="nb-stat"><div class="nb-stat-num">1:1</div><div class="nb-stat-label">Custom pricing</div></div>
+    <div class="nb-stat"><div class="nb-stat-num">∞</div><div class="nb-stat-label">Impact potential</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">How it works</div>
+  <div class="section-title">Your journey to feeling well</div>
+  <div class="section-sub">A simple, supported process from first call to lasting results.</div>
+  <div class="process-steps">
+    <div class="step"><div class="step-num">01</div><div class="step-title">Book a discovery call</div><div class="step-desc">A free 20-minute conversation for individuals or organizations to explore the right fit.</div></div>
+    <div class="step"><div class="step-num">02</div><div class="step-title">Complete your intake</div><div class="step-desc">Share your health history, goals, and what's not working so we can build your plan.</div></div>
+    <div class="step"><div class="step-num">03</div><div class="step-title">Start your program</div><div class="step-desc">Begin 1:1 or group coaching sessions with a clear roadmap tailored to your goals.</div></div>
+    <div class="step"><div class="step-num">04</div><div class="step-title">Feel the shift</div><div class="step-desc">More energy. Better digestion. A body you feel at home in. That's what we're working toward.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Client stories</div>
+  <div class="section-title">Results that speak for themselves</div>
+  <div class="section-sub">Real women, real transformations.</div>
+  <div class="testi-grid">
+    <div class="testi"><div class="testi-quote">"I finally feel like myself again. After chemo destroyed my gut, this program gave me my life back."</div><div class="testi-name">— Jasmine R., survivor</div></div>
+    <div class="testi"><div class="testi-quote">"I'd been bloated and exhausted for years. Within 6 weeks of coaching I felt a shift I hadn't experienced in a decade."</div><div class="testi-name">— Tanya M., wellness client</div></div>
+    <div class="testi"><div class="testi-quote">"She brought a workshop to our support group and it was the most engaged our members have ever been. Powerful and practical."</div><div class="testi-name">— Director, breast cancer nonprofit</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Questions</div>
+  <div class="section-title">Frequently asked</div>
+  <div class="faq-item"><div class="faq-q">Do I need to be a breast cancer survivor to work with you?</div><div class="faq-a">Not at all. The survivor track is designed for those who've gone through breast cancer treatment, but the women's wellness program is open to any woman ready to heal her gut.</div></div>
+  <div class="faq-item"><div class="faq-q">How long is the coaching program?</div><div class="faq-a">Programs are typically 3 or 6 months. Pricing is discussed on the discovery call — not posted publicly, so we can find the right fit for you.</div></div>
+  <div class="faq-item"><div class="faq-q">What does an organizational partnership look like?</div><div class="faq-a">Every partnership is custom-built — a one-time workshop, a recurring group program, subsidized 1:1 sessions, or a combination. We'll design it together based on your community's needs and budget.</div></div>
+  <div class="faq-item"><div class="faq-q">What if I'm still in active treatment?</div><div class="faq-a">We can discuss your specific situation on the discovery call. In some cases, we can begin gentle foundational work even during treatment.</div></div>
+</div>
+
+<div class="cta-bar">
+  <div class="cta-h">Ready to take the first step?</div>
+  <div class="cta-sub">Whether you're an individual or an organization — let's start with a conversation.</div>
+  <div class="cta-btns">
+    <button class="cta-btn pink">Book a free discovery call</button>
+    <button class="cta-btn outline">Inquire about an organizational partnership</button>
+  </div>
+</div>
+
+  <div class="footer">
+    <a href="/" class="footer-logo">Diary of <span>A Breastie</span></a>
+    <div class="footer-links">
+      <a href="/listen">Podcast</a>
+      <a href="/newsletter">Newsletter</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+    </div>
+    <div>&copy; 2026 Diary of a Breastie</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breastie Library — Diary of a Breastie</title>
+  <meta name="description" content="The Breastie Library — articles, guides, and free downloads to support every stage of your breast cancer journey. From gut health to survivorship, faith to nutrition.">
+  <meta name="keywords" content="breast cancer resources, survivor guides, gut health articles, free downloads, wellness library, Diary of a Breastie">
+  <meta name="author" content="Diary of a Breastie">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diaryofabreastie.com/library">
+  <meta property="og:title" content="Breastie Library — Resources for Breast Cancer Survivors">
+  <meta property="og:description" content="Articles, guides, and free downloads to support every stage of your breast cancer journey.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diaryofabreastie.com/library">
+  <meta property="og:site_name" content="Diary of a Breastie">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Breastie Library — Resources for Breast Cancer Survivors">
+  <meta name="twitter:description" content="Articles, guides, and free downloads for breast cancer survivors.">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1a1a1a; background: #fff; }
+    .page-wrapper { margin: 0 auto; background: #fff; padding-top: 52px; min-height: 100vh; display: flex; flex-direction: column; }
+
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px max(28px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; position: fixed; top: 0; left: 0; width: 100%; background: #fff; z-index: 100; }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 15px; text-decoration: none; color: #1a1a1a; }
+    .nav-logo span { font-style: italic; color: #D85A8A; }
+    .nav-links { display: flex; gap: 20px; list-style: none; font-size: 13px; color: #666; }
+    .nav-links a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+    .nav-links a:hover { color: #D85A8A; }
+    .nav-links .active { color: #D85A8A; font-weight: 500; }
+    .nav-cta { background: #D85A8A; color: white; border: none; padding: 8px 16px; border-radius: 20px; font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.3s ease, transform 0.2s ease; text-decoration: none; display: inline-block; }
+    .nav-cta:hover { background: #c44d7a; transform: scale(1.03); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; }
+
+    .page-hero { padding: 48px max(32px, calc((100% - 960px) / 2)) 36px; background: #f7f7f5; border-bottom: 0.5px solid #e0e0e0; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; animation: fadeInUp 0.6s ease; }
+    .page-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
+    .page-h1 { font-family: 'DM Serif Display', serif; font-size: 36px; line-height: 1.1; margin-bottom: 12px; }
+    .page-h1 em { font-style: italic; color: #D85A8A; }
+    .page-sub { font-size: 14px; color: #555; max-width: 440px; line-height: 1.7; margin-bottom: 12px; }
+    .substack-note { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #666; background: white; border: 0.5px solid #e0e0e0; padding: 6px 12px; border-radius: 20px; }
+    .substack-dot { width: 7px; height: 7px; border-radius: 50%; background: #FF6719; }
+    .coming-soon-card { background: #FCF0F5; border: 0.5px solid #F4C0D1; border-radius: 12px; padding: 20px 24px; max-width: 260px; text-align: center; }
+    .cs-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #993356; margin-bottom: 8px; }
+    .cs-h { font-family: 'DM Serif Display', serif; font-size: 16px; margin-bottom: 6px; }
+    .cs-desc { font-size: 12px; color: #666; line-height: 1.5; }
+
+    .filter-bar { display: flex; gap: 8px; padding: 16px max(32px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; flex-wrap: wrap; background: white; }
+    .filter-pill { padding: 6px 14px; border-radius: 20px; font-size: 12px; border: 0.5px solid #e0e0e0; cursor: pointer; background: white; color: #666; font-family: 'DM Sans', sans-serif; white-space: nowrap; transition: all 0.3s ease; }
+    .filter-pill:hover { border-color: #D85A8A; color: #D85A8A; }
+    .filter-pill.active { background: #D85A8A; color: white; border-color: #D85A8A; }
+
+    .section { padding: 36px max(32px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; }
+    .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
+    .section-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 6px; }
+    .section-sub { font-size: 13px; color: #666; margin-bottom: 24px; }
+    .substack-link { font-size: 12px; color: #D85A8A; transition: color 0.2s ease; }
+    .substack-link:hover { color: #993356; }
+
+    .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .article-card { background: white; border: 0.5px solid #e0e0e0; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; transition: box-shadow 0.3s ease, transform 0.2s ease; }
+    .article-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); transform: translateY(-2px); }
+    .article-tag { display: inline-block; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; margin-bottom: 10px; width: fit-content; }
+    .tag-gut { background: #EAF3DE; color: #3B6D11; }
+    .tag-survival { background: #FCF0F5; color: #993356; }
+    .tag-faith { background: #EEEDFE; color: #3C3489; }
+    .tag-nutrition { background: #FAEEDA; color: #854F0B; }
+    .tag-movement { background: #E1F5EE; color: #0F6E56; }
+    .tag-mental { background: #E6F1FB; color: #185FA5; }
+    .article-title { font-family: 'DM Serif Display', serif; font-size: 15px; margin-bottom: 8px; line-height: 1.3; flex: 1; }
+    .article-desc { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 14px; }
+    .article-footer { display: flex; align-items: center; justify-content: space-between; }
+    .article-source { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #666; }
+    .orange-dot { width: 6px; height: 6px; border-radius: 50%; background: #FF6719; }
+    .read-link { font-size: 12px; color: #D85A8A; font-weight: 500; cursor: pointer; transition: color 0.2s ease; }
+    .read-link:hover { color: #993356; }
+
+    .downloads-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .download-card { background: #FCF0F5; border: 0.5px solid #F4C0D1; border-radius: 12px; padding: 20px; transition: box-shadow 0.3s ease, transform 0.2s ease; }
+    .download-card:hover { box-shadow: 0 4px 16px rgba(216,90,138,0.1); transform: translateY(-2px); }
+    .dl-icon-wrap { width: 40px; height: 40px; border-radius: 10px; background: #D85A8A; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+    .dl-title { font-size: 14px; font-weight: 500; margin-bottom: 5px; line-height: 1.3; }
+    .dl-desc { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 14px; }
+    .dl-btn { width: 100%; background: #D85A8A; color: white; border: none; padding: 9px; border-radius: 20px; font-size: 12px; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: background 0.3s ease, transform 0.2s ease; }
+    .dl-btn:hover { background: #c44d7a; transform: scale(1.02); }
+
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 100; align-items: center; justify-content: center; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: white; border-radius: 16px; padding: 32px; max-width: 380px; width: 90%; border: 0.5px solid #e0e0e0; animation: fadeInUp 0.3s ease; }
+    .modal-h { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 6px; }
+    .modal-sub { font-size: 13px; color: #666; margin-bottom: 20px; line-height: 1.5; }
+    .modal-resource-name { background: #f7f7f5; border-radius: 8px; padding: 8px 12px; font-size: 12px; color: #D85A8A; font-weight: 500; margin-bottom: 16px; }
+    .modal-input { width: 100%; border: 0.5px solid #e0e0e0; border-radius: 8px; padding: 10px 14px; font-size: 13px; font-family: 'DM Sans', sans-serif; background: white; color: #1a1a1a; outline: none; margin-bottom: 10px; transition: border-color 0.3s ease; }
+    .modal-input:focus { border-color: #D85A8A; }
+    .modal-submit { width: 100%; background: #D85A8A; color: white; border: none; padding: 11px; border-radius: 22px; font-size: 13px; font-family: 'DM Sans', sans-serif; cursor: pointer; margin-bottom: 10px; transition: background 0.3s ease; }
+    .modal-submit:hover { background: #c44d7a; }
+    .modal-close { width: 100%; background: transparent; border: none; font-size: 12px; color: #666; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+
+    /* FOOTER */
+    .footer { margin-top: auto; padding: 24px max(32px, calc((100% - 960px) / 2)); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 15px; color: #1a1a1a; text-decoration: none; }
+    .footer-logo span { font-style: italic; color: #D85A8A; }
+    .footer-links { display: flex; gap: 16px; }
+    .footer-links a { color: #666; text-decoration: none; font-size: 12px; transition: color 0.2s ease; }
+    .footer-links a:hover { color: #D85A8A; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 16px 28px; gap: 14px; border-bottom: 0.5px solid #e0e0e0; z-index: 99; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+      .nav-links.open { display: flex; }
+      .nav-right { gap: 10px; }
+      .nav-cta { font-size: 11px; padding: 6px 12px; }
+      .nav { padding: 12px 20px; }
+      .page-hero { grid-template-columns: 1fr; padding: 32px 20px; }
+      .coming-soon-card { max-width: 100%; }
+      .page-h1 { font-size: 28px; }
+      .filter-bar { overflow-x: auto; flex-wrap: nowrap; padding: 12px 20px; -webkit-overflow-scrolling: touch; }
+      .article-grid { grid-template-columns: 1fr; }
+      .downloads-grid { grid-template-columns: 1fr; }
+      .section { padding: 28px 20px; }
+      .section-title { font-size: 20px; }
+      .footer { flex-direction: column; gap: 12px; text-align: center; padding: 20px; }
+    }
+    @media (max-width: 480px) {
+      .page-h1 { font-size: 24px; }
+      .page-hero { padding: 24px 16px; }
+      .section { padding: 24px 16px; }
+      .filter-bar { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+<nav class="nav">
+  <a href="/" class="nav-logo">Diary of <span>A Breastie</span></a>
+  <ul class="nav-links">
+    <li><a href="/listen">Listen</a></li>
+    <li><a href="/library" class="active">Breastie Library</a></li>
+    <li><a href="/programs">Wellness Programs</a></li>
+    <li><a href="/newsletter">Newsletter</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+  <div class="nav-right">
+      <a href="/work-with-me" class="nav-cta">Work With Me</a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+</nav>
+
+<div class="page-hero">
+  <div>
+    <div class="page-eyebrow">Breastie Library</div>
+    <h1 class="page-h1">Your resource <em>hub.</em></h1>
+    <p class="page-sub">Articles, guides, and free downloads to support every stage of your breast cancer journey — from diagnosis to thriving. Written for survivors, by someone who gets it.</p>
+    <div class="substack-note"><div class="substack-dot"></div>Articles published on Substack — click any card to read in full</div>
+  </div>
+  <div class="coming-soon-card">
+    <div class="cs-label">Coming soon</div>
+    <div class="cs-h">Breastie Marketplace</div>
+    <div class="cs-desc">A full resource marketplace for the breast cancer community — free resources, vetted products, and trusted providers. More details to come.</div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-pill active" onclick="filterArticles('all',this)">All</button>
+  <button class="filter-pill" onclick="filterArticles('articles',this)">Articles</button>
+  <button class="filter-pill" onclick="filterArticles('downloads',this)">Free downloads</button>
+  <button class="filter-pill" onclick="filterArticles('gut',this)">Gut health</button>
+  <button class="filter-pill" onclick="filterArticles('survival',this)">Survivorship</button>
+  <button class="filter-pill" onclick="filterArticles('mental',this)">Mental wellness</button>
+  <button class="filter-pill" onclick="filterArticles('nutrition',this)">Nutrition</button>
+  <button class="filter-pill" onclick="filterArticles('movement',this)">Movement</button>
+  <button class="filter-pill" onclick="filterArticles('faith',this)">Faith &amp; purpose</button>
+</div>
+
+<div class="section" id="articlesSection">
+  <div class="section-header"><div><div class="section-label">Articles</div><div class="section-title">From the Breastie Substack</div></div><div class="substack-link">View all on Substack →</div></div>
+  <p class="section-sub">Honest, practical writing on gut health, survivorship, faith, and healing. New articles published regularly.</p>
+  <div class="article-grid">
+    <div class="article-card" data-category="gut"><span class="article-tag tag-gut">Gut health</span><div class="article-title">The Survivor's Guide to Gut Health After Chemo</div><div class="article-desc">What cancer treatment really does to your microbiome — and the steps to start rebuilding from the inside out.</div><div class="article-footer"><div class="article-source"><div class="orange-dot"></div>Substack</div><div class="read-link">Read →</div></div></div>
+    <div class="article-card" data-category="mental"><span class="article-tag tag-mental">Mental wellness</span><div class="article-title">What is Scanxiety — and How Do You Actually Manage It?</div><div class="article-desc">The anxiety that comes with follow-up scans is real, valid, and incredibly common. Here's how survivors cope.</div><div class="article-footer"><div class="article-source"><div class="orange-dot"></div>Substack</div><div class="read-link">Read →</div></div></div>
+    <div class="article-card" data-category="survival"><span class="article-tag tag-survival">Survivorship</span><div class="article-title">25 Essentials Every Breast Cancer Survivor Should Know</div><div class="article-desc">The things nobody tells you at discharge — practical wisdom for navigating life on the other side of treatment.</div><div class="article-footer"><div class="article-source"><div class="orange-dot"></div>Substack</div><div class="read-link">Read →</div></div></div>
+    <div class="article-card" data-category="faith"><span class="article-tag tag-faith">Faith &amp; purpose</span><div class="article-title">Why I Chose Faith Over Fear — and What That Looked Like in Practice</div><div class="article-desc">A personal reflection on anchoring your healing in something bigger than yourself when the road gets hard.</div><div class="article-footer"><div class="article-source"><div class="orange-dot"></div>Substack</div><div class="read-link">Read →</div></div></div>
+    <div class="article-card" data-category="movement"><span class="article-tag tag-movement">Movement</span><div class="article-title">Movement as Medicine — Joyful Fitness for Breast Cancer Survivors</div><div class="article-desc">How to reclaim movement without guilt, fear, or pushing too hard on a body that has been through so much.</div><div class="article-footer"><div class="article-source"><div class="orange-dot"></div>Substack</div><div class="read-link">Read →</div></div></div>
+    <div class="article-card" data-category="nutrition"><span class="article-tag tag-nutrition">Nutrition</span><div class="article-title">Rebuilding Your Relationship With Food After Chemo</div><div class="article-desc">Compassionate, practical guidance on nourishing your body through recovery — without the diet culture noise.</div><div class="article-footer"><div class="article-source"><div class="orange-dot"></div>Substack</div><div class="read-link">Read →</div></div></div>
+  </div>
+</div>
+
+<div class="section" id="downloadsSection">
+  <div class="section-label">Free downloads</div>
+  <div class="section-title">Take something with you</div>
+  <p class="section-sub">Enter your email to download — you'll also be added to the Breastie newsletter community. Unsubscribe anytime.</p>
+  <div class="downloads-grid">
+    <div class="download-card"><div class="dl-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div><div class="dl-title">25 Essentials for Breast Cancer Awareness</div><div class="dl-desc">A comprehensive guide every survivor, patient, and caregiver should have in hand.</div><button class="dl-btn" onclick="openModal('25 Essentials for Breast Cancer Awareness')">Get your free copy</button></div>
+    <div class="download-card"><div class="dl-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div><div class="dl-title">Breastie Wellness Starter Guide</div><div class="dl-desc">A beginner's roadmap to gut health, movement, and mindset after treatment.</div><button class="dl-btn" onclick="openModal('Breastie Wellness Starter Guide')">Get your free copy</button></div>
+    <div class="download-card"><div class="dl-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div><div class="dl-title">5-Day Gut Reset for Survivors</div><div class="dl-desc">A gentle 5-day protocol to begin healing your gut microbiome after cancer treatment.</div><button class="dl-btn" onclick="openModal('5-Day Gut Reset for Survivors')">Get your free copy</button></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-h">Get your free download</div>
+    <div class="modal-sub">Enter your name and email to receive your resource. You'll also join the Breastie newsletter — wellness wisdom and survivor stories, weekly.</div>
+    <div class="modal-resource-name" id="modalResourceName"></div>
+    <input class="modal-input" type="text" placeholder="First name"/>
+    <input class="modal-input" type="email" placeholder="Email address"/>
+    <button class="modal-submit">Send me the download</button>
+    <button class="modal-close" onclick="closeModal()">No thanks, close</button>
+  </div>
+</div>
+
+  <div class="footer">
+    <a href="/" class="footer-logo">Diary of <span>A Breastie</span></a>
+    <div class="footer-links">
+      <a href="/listen">Podcast</a>
+      <a href="/newsletter">Newsletter</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+    </div>
+    <div>&copy; 2026 Diary of a Breastie</div>
+  </div>
+
+</div>
+<script>
+function openModal(n) {
+  document.getElementById('modalResourceName').textContent = n;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+}
+function filterArticles(cat, btn) {
+  document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  const cards = document.querySelectorAll('.article-card');
+  const as = document.getElementById('articlesSection');
+  const ds = document.getElementById('downloadsSection');
+  if (cat === 'downloads') { as.style.display = 'none'; ds.style.display = 'block'; return; }
+  as.style.display = 'block';
+  ds.style.display = cat === 'articles' ? 'none' : 'block';
+  cards.forEach(c => {
+    c.style.display = (cat === 'all' || cat === 'articles' || c.dataset.category === cat) ? 'flex' : 'none';
+  });
+}
+document.getElementById('modalOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listen — Diary of a Breastie</title>
+  <meta name="description" content="Listen to the Diary of a Breastie podcast — real conversations with breast cancer survivors, doctors, and wellness experts. Available on Spotify, YouTube, and Amazon Music.">
+  <meta name="keywords" content="breast cancer podcast, survivor stories, wellness podcast, gut health, faith healing, Diary of a Breastie">
+  <meta name="author" content="Diary of a Breastie">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diaryofabreastie.com/listen">
+  <meta property="og:title" content="Listen — Diary of a Breastie Podcast">
+  <meta property="og:description" content="Real conversations with breast cancer survivors, doctors, and wellness experts. New episodes weekly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diaryofabreastie.com/listen">
+  <meta property="og:site_name" content="Diary of a Breastie">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Listen — Diary of a Breastie Podcast">
+  <meta name="twitter:description" content="Real conversations with breast cancer survivors, doctors, and wellness experts.">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1a1a1a; background: #fff; }
+    .page-wrapper { margin: 0 auto; background: #fff; padding-top: 52px; min-height: 100vh; display: flex; flex-direction: column; }
+
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px max(28px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; position: fixed; top: 0; left: 0; width: 100%; background: #fff; z-index: 100; }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 15px; text-decoration: none; color: #1a1a1a; }
+    .nav-logo span { font-style: italic; color: #D85A8A; }
+    .nav-links { display: flex; gap: 20px; list-style: none; font-size: 13px; color: #666; }
+    .nav-links a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+    .nav-links a:hover { color: #D85A8A; }
+    .nav-links .active { color: #D85A8A; font-weight: 500; }
+    .nav-cta { background: #D85A8A; color: white; border: none; padding: 8px 16px; border-radius: 20px; font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.3s ease, transform 0.2s ease; text-decoration: none; display: inline-block; }
+    .nav-cta:hover { background: #c44d7a; transform: scale(1.03); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; }
+
+    .page-hero { padding: 48px max(32px, calc((100% - 960px) / 2)) 36px; background: #FCF0F5; border-bottom: 0.5px solid #e0e0e0; animation: fadeInUp 0.6s ease; }
+    .page-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
+    .page-h1 { font-family: 'DM Serif Display', serif; font-size: 38px; line-height: 1.1; margin-bottom: 12px; }
+    .page-h1 em { font-style: italic; color: #D85A8A; }
+    .page-sub { font-size: 14px; color: #555; max-width: 480px; line-height: 1.7; margin-bottom: 24px; }
+    .platform-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .platform-btn { display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 22px; border: 0.5px solid #e0e0e0; font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif; background: white; color: #1a1a1a; transition: transform 0.2s ease, opacity 0.2s ease; }
+    .platform-btn:hover { transform: scale(1.05); opacity: 0.9; }
+    .platform-btn.spotify { background: #1DB954; color: white; border-color: #1DB954; }
+    .platform-btn.youtube { background: #FF0000; color: white; border-color: #FF0000; }
+    .platform-btn.amazon { background: #232F3E; color: white; border-color: #232F3E; }
+
+    .section { padding: 36px max(32px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; }
+    .section-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 8px; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 6px; }
+    .section-sub { font-size: 13px; color: #666; margin-bottom: 24px; }
+    .start-here-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 32px; }
+    .start-card { background: #FCF0F5; border-radius: 12px; padding: 18px; border: 0.5px solid #F4C0D1; transition: box-shadow 0.3s ease, transform 0.2s ease; }
+    .start-card:hover { box-shadow: 0 4px 16px rgba(216,90,138,0.12); transform: translateY(-2px); }
+    .start-tag { font-size: 11px; color: #993356; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .start-title { font-family: 'DM Serif Display', serif; font-size: 16px; margin-bottom: 6px; line-height: 1.3; }
+    .start-desc { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 12px; }
+    .listen-link { font-size: 12px; color: #D85A8A; font-weight: 500; cursor: pointer; transition: color 0.2s ease; }
+    .listen-link:hover { color: #993356; }
+
+    .ep-list { display: flex; flex-direction: column; }
+    .ep-row { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 0.5px solid #e0e0e0; transition: background 0.2s ease; }
+    .ep-row:last-child { border-bottom: none; }
+    .ep-row:hover { background: #fafafa; }
+    .ep-num-badge { width: 36px; height: 36px; border-radius: 50%; background: #f7f7f5; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #D85A8A; font-weight: 500; flex-shrink: 0; }
+    .ep-info { flex: 1; }
+    .ep-info-title { font-size: 14px; font-weight: 500; margin-bottom: 3px; }
+    .ep-info-desc { font-size: 12px; color: #666; line-height: 1.4; }
+    .ep-meta { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .ep-duration { font-size: 12px; color: #666; }
+    .ep-play { width: 30px; height: 30px; border-radius: 50%; background: #D85A8A; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, background 0.3s ease; }
+    .ep-play:hover { transform: scale(1.15); background: #c44d7a; }
+
+    /* FOOTER */
+    .footer { margin-top: auto; padding: 24px max(32px, calc((100% - 960px) / 2)); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 15px; color: #1a1a1a; text-decoration: none; }
+    .footer-logo span { font-style: italic; color: #D85A8A; }
+    .footer-links { display: flex; gap: 16px; }
+    .footer-links a { color: #666; text-decoration: none; font-size: 12px; transition: color 0.2s ease; }
+    .footer-links a:hover { color: #D85A8A; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 16px 28px; gap: 14px; border-bottom: 0.5px solid #e0e0e0; z-index: 99; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+      .nav-links.open { display: flex; }
+      .nav-right { gap: 10px; }
+      .nav-cta { font-size: 11px; padding: 6px 12px; }
+      .nav { padding: 12px 20px; }
+      .page-hero { padding: 32px 20px; }
+      .page-h1 { font-size: 30px; }
+      .start-here-grid { grid-template-columns: 1fr; }
+      .section { padding: 28px 20px; }
+      .section-title { font-size: 20px; }
+      .ep-row { gap: 12px; }
+      .ep-info-desc { display: none; }
+      .footer { flex-direction: column; gap: 12px; text-align: center; padding: 20px; }
+    }
+    @media (max-width: 480px) {
+      .page-h1 { font-size: 26px; }
+      .page-hero { padding: 24px 16px; }
+      .section { padding: 24px 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+  <nav class="nav">
+    <a href="/" class="nav-logo">Diary of <span>A Breastie</span></a>
+      <ul class="nav-links">
+      <li><a href="/listen" class="active">Listen</a></li>
+      <li><a href="/library">Breastie Library</a></li>
+      <li><a href="/programs">Wellness Programs</a></li>
+      <li><a href="/newsletter">Newsletter</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="/work-with-me" class="nav-cta">Work With Me</a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-eyebrow">The Podcast</div>
+    <h1 class="page-h1">Real stories.<br><em>Real strength.</em></h1>
+    <p class="page-sub">Every episode is a conversation worth having — with survivors, doctors, wellness experts, and women who have been through it.</p>
+    <div class="platform-row">
+      <button class="platform-btn spotify">Spotify</button>
+      <button class="platform-btn youtube">YouTube</button>
+      <button class="platform-btn amazon">Amazon Music</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">New here?</div>
+    <div class="section-title">Start with these episodes</div>
+    <div class="section-sub">A curated guide for first-time listeners.</div>
+    <div class="start-here-grid">
+      <div class="start-card"><div class="start-tag">Ep 01 · Origin story</div><div class="start-title">Why I started Diary of a Breastie</div><div class="start-desc">The story behind the mic — why this platform exists and who it's for.</div><div class="listen-link">Listen now →</div></div>
+      <div class="start-card"><div class="start-tag">Ep 08 · Gut health</div><div class="start-title">What chemo does to your gut — and how to heal</div><div class="start-desc">A deep dive into post-treatment gut health.</div><div class="listen-link">Listen now →</div></div>
+      <div class="start-card"><div class="start-tag">Ep 14 · Community</div><div class="start-title">You are not alone — finding your Breastie tribe</div><div class="start-desc">On building community after diagnosis.</div><div class="listen-link">Listen now →</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">All episodes</div>
+    <div class="section-title">Recent episodes</div>
+    <div class="section-sub">New episodes drop weekly. Subscribe so you never miss one.</div>
+    <div class="ep-list">
+      <div class="ep-row"><div class="ep-num-badge">27</div><div class="ep-info"><div class="ep-info-title">Finding joy after treatment</div><div class="ep-info-desc">Reclaiming your body and your life post-chemo.</div></div><div class="ep-meta"><span class="ep-duration">42 min</span><button class="ep-play"><svg width="10" height="12" viewBox="0 0 12 14" fill="none"><path d="M1 1l10 6-10 6V1z" fill="white"/></svg></button></div></div>
+      <div class="ep-row"><div class="ep-num-badge">26</div><div class="ep-info"><div class="ep-info-title">Hormones, hair loss & healing</div><div class="ep-info-desc">The hormonal aftermath of breast cancer treatment nobody talks about.</div></div><div class="ep-meta"><span class="ep-duration">38 min</span><button class="ep-play"><svg width="10" height="12" viewBox="0 0 12 14" fill="none"><path d="M1 1l10 6-10 6V1z" fill="white"/></svg></button></div></div>
+      <div class="ep-row"><div class="ep-num-badge">25</div><div class="ep-info"><div class="ep-info-title">Faith, fear & the waiting room</div><div class="ep-info-desc">How faith carried three survivors through their darkest moments.</div></div><div class="ep-meta"><span class="ep-duration">51 min</span><button class="ep-play"><svg width="10" height="12" viewBox="0 0 12 14" fill="none"><path d="M1 1l10 6-10 6V1z" fill="white"/></svg></button></div></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="/" class="footer-logo">Diary of <span>A Breastie</span></a>
+    <div class="footer-links">
+      <a href="/listen">Podcast</a>
+      <a href="/newsletter">Newsletter</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+    </div>
+    <div>&copy; 2026 Diary of a Breastie</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-pink: #D85A8A;
+  --color-pink-dark: #993356;
+  --color-pink-hover: #c44d7a;
+  --color-pink-light: #FCF0F5;
+  --color-pink-border: #F4C0D1;
+  --color-beige: #f7f7f5;
+  --color-text: #1a1a1a;
+  --color-text-light: #555;
+  --color-text-gray: #666;
+  --color-text-muted: #888;
+  --color-border: #e0e0e0;
+  --color-teal: #1D9E75;
+  --color-teal-dark: #0F6E56;
+  --color-teal-hover: #178a66;
+  --color-teal-bg: #E1F5EE;
+  --color-green-bg: #EAF3DE;
+  --color-green-text: #3B6D11;
+  --color-purple-bg: #EEEDFE;
+  --color-purple-text: #3C3489;
+  --color-orange: #FF6719;
+  --color-nutrition-bg: #FAEEDA;
+  --color-nutrition-text: #854F0B;
+  --color-mental-bg: #E6F1FB;
+  --color-mental-text: #185FA5;
+  --color-spotify: #1DB954;
+  --color-youtube: #FF0000;
+  --color-amazon: #232F3E;
+  --font-serif: 'DM Serif Display', serif;
+  --font-sans: 'DM Sans', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); color: var(--color-text); background: #fff; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease;
+}
+
+.animate-fade-in-up-delay {
+  animation: fadeInUp 0.6s ease 0.15s both;
 }

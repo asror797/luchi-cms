@@ -1,0 +1,599 @@
+/* ── fadeInUp animation ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════
+   1. HERO SPLIT
+   ══════════════════════════════════════ */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  animation: fadeInUp 0.6s ease;
+  border-bottom: 0.5px solid #e0e0e0;
+}
+
+.heroLeft {
+  padding: 48px 48px 40px max(32px, calc((100% - 480px)));
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroRight {
+  padding: 48px 32px 40px;
+  background: #FCF0F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #D85A8A;
+  margin-bottom: 10px;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  line-height: 1.15;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+}
+
+.heroTitleItalic {
+  font-style: italic;
+  color: #D85A8A;
+}
+
+.heroBody p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.heroBody p:last-child {
+  margin-bottom: 0;
+}
+
+/* Host card */
+.hostAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #F4C0D1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.hostAvatarEmoji {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.hostLabel {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #D85A8A;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.hostName {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.hostTitle {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.hostBio {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 300px;
+  margin-bottom: 14px;
+}
+
+.socialButtons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.socialBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 0.5px solid #e0e0e0;
+  font-size: 14px;
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: border-color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.socialBtn:hover {
+  border-color: #D85A8A;
+  transform: scale(1.08);
+}
+
+/* ══════════════════════════════════════
+   2. MISSION
+   ══════════════════════════════════════ */
+.mission {
+  background: #f7f7f5;
+  padding: 40px max(32px, calc((100% - 960px) / 2));
+  border-bottom: 0.5px solid #e0e0e0;
+  animation: fadeInUp 0.6s ease 0.15s both;
+}
+
+.missionInner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.missionLabel {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #D85A8A;
+  margin-bottom: 10px;
+}
+
+.missionQuote {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-style: italic;
+  line-height: 1.4;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.missionBody {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* ══════════════════════════════════════
+   3. VALUES GRID
+   ══════════════════════════════════════ */
+.values {
+  border-bottom: 0.5px solid #e0e0e0;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.valueCard {
+  text-align: center;
+  padding: 28px 20px;
+  border-right: 0.5px solid #e0e0e0;
+  transition: background 0.2s;
+}
+
+.valueCard:last-child {
+  border-right: none;
+}
+
+.valueCard:hover {
+  background: #fafafa;
+}
+
+.valueEmoji {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.valueTitle {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.valueDesc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ══════════════════════════════════════
+   4. WORK WITH ME SECTION
+   ══════════════════════════════════════ */
+.workSection {
+  padding: 36px max(32px, calc((100% - 960px) / 2));
+  border-bottom: 0.5px solid #e0e0e0;
+}
+
+.workSectionTitle {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+/* Booking bar */
+.bookingBar {
+  background: #FCF0F5;
+  border: 0.5px solid #F4C0D1;
+  border-radius: 10px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.bookingBarText {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.bookingBarBtn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #D85A8A;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.bookingBarBtn:hover {
+  background: #c44d7a;
+  transform: scale(1.03);
+}
+
+/* Work cards grid */
+.workCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.workCard {
+  border: 0.5px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px 18px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.workCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.workCardFeatured {
+  background: #FCF0F5;
+  border-color: #F4C0D1;
+}
+
+.workCardEmoji {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.workCardTitle {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.workCardDesc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Contact cards */
+.contactCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.contactCard {
+  border: 0.5px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 18px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contactCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.contactCardTitle {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.contactCardDesc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.contactCardLink {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #D85A8A;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contactCardLink:hover {
+  color: #c44d7a;
+}
+
+/* ══════════════════════════════════════
+   5. CONTACT FORM
+   ══════════════════════════════════════ */
+.contactSection {
+  padding: 36px max(32px, calc((100% - 960px) / 2));
+  background: #f7f7f5;
+}
+
+.contactInner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contactHeading {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.contactSub {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroupFull {
+  grid-column: 1 / -1;
+}
+
+.formLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  padding: 9px 12px;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: var(--font-sans);
+  color: #1a1a1a;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  border-color: #D85A8A;
+}
+
+.formTextarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.formSubmit {
+  grid-column: 1 / -1;
+  display: inline-block;
+  padding: 10px 28px;
+  background: #D85A8A;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  justify-self: start;
+}
+
+.formSubmit:hover {
+  background: #c44d7a;
+  transform: scale(1.03);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .heroLeft {
+    padding: 36px 24px 28px;
+  }
+
+  .heroRight {
+    padding: 28px 24px 36px;
+    text-align: center;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+  }
+
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .valueCard {
+    border-right: none;
+    border-bottom: 0.5px solid #e0e0e0;
+  }
+
+  .valueCard:nth-child(odd) {
+    border-right: 0.5px solid #e0e0e0;
+  }
+
+  .valueCard:nth-child(n+3) {
+    border-bottom: none;
+  }
+
+  .workCards {
+    grid-template-columns: 1fr;
+  }
+
+  .contactCards {
+    grid-template-columns: 1fr;
+  }
+
+  .bookingBar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 16px 20px;
+  }
+
+  .workSection {
+    padding: 28px 24px;
+  }
+
+  .workSectionTitle {
+    font-size: 22px;
+  }
+
+  .mission {
+    padding: 32px 24px;
+  }
+
+  .missionQuote {
+    font-size: 22px;
+  }
+
+  .contactSection {
+    padding: 28px 24px;
+  }
+
+  .socialButtons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroLeft {
+    padding: 28px 20px 24px;
+  }
+
+  .heroRight {
+    padding: 24px 20px 28px;
+  }
+
+  .heroTitle {
+    font-size: 26px;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .valueCard {
+    border-right: none;
+    border-bottom: 0.5px solid #e0e0e0;
+  }
+
+  .valueCard:nth-child(odd) {
+    border-right: none;
+  }
+
+  .valueCard:last-child {
+    border-bottom: none;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formSubmit {
+    width: 100%;
+    text-align: center;
+  }
+
+  .missionQuote {
+    font-size: 20px;
+  }
+
+  .contactHeading {
+    font-size: 22px;
+  }
+
+  .workSection,
+  .mission,
+  .contactSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

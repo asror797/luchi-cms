@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About & Work With Me — Diary of a Breastie</title>
+  <meta name="description" content="About Diary of a Breastie — the story behind the mic. A faith-integrated wellness platform born from the belief that every breast cancer survivor's story deserves to be heard.">
+  <meta name="keywords" content="about Diary of a Breastie, breast cancer community, survivor platform, faith wellness, gut health coach, podcast host">
+  <meta name="author" content="Diary of a Breastie">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diaryofabreastie.com/about">
+  <meta property="og:title" content="About — Diary of a Breastie">
+  <meta property="og:description" content="The story behind the mic. A faith-integrated wellness platform for breast cancer survivors.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diaryofabreastie.com/about">
+  <meta property="og:site_name" content="Diary of a Breastie">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About — Diary of a Breastie">
+  <meta name="twitter:description" content="The story behind the mic — a wellness platform for breast cancer survivors.">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1a1a1a; background: #fff; }
+    .page-wrapper { margin: 0 auto; background: #fff; padding-top: 52px; min-height: 100vh; display: flex; flex-direction: column; }
+
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px max(28px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; position: fixed; top: 0; left: 0; width: 100%; background: #fff; z-index: 100; }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 15px; text-decoration: none; color: #1a1a1a; }
+    .nav-logo span { font-style: italic; color: #D85A8A; }
+    .nav-links { display: flex; gap: 20px; list-style: none; font-size: 13px; color: #666; }
+    .nav-links a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+    .nav-links a:hover { color: #D85A8A; }
+    .nav-links .active { color: #D85A8A; font-weight: 500; }
+    .nav-cta { background: #D85A8A; color: white; border: none; padding: 8px 16px; border-radius: 20px; font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.3s ease, transform 0.2s ease; text-decoration: none; display: inline-block; }
+    .nav-cta:hover { background: #c44d7a; transform: scale(1.03); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; }
+
+    .about-hero-wrap { background: linear-gradient(to right, #fff 50%, #FCF0F5 50%); border-bottom: 0.5px solid #e0e0e0; }
+    .about-hero { display: grid; grid-template-columns: 1fr 1fr; max-width: 960px; margin: 0 auto; }
+    .about-left { padding: 48px 36px; animation: fadeInUp 0.6s ease; }
+    .page-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
+    .page-h1 { font-family: 'DM Serif Display', serif; font-size: 36px; line-height: 1.15; margin-bottom: 18px; }
+    .page-h1 em { font-style: italic; color: #D85A8A; }
+    .about-body { font-size: 14px; color: #555; line-height: 1.8; }
+    .about-body p { margin-bottom: 14px; }
+    .about-right { background: #FCF0F5; padding: 48px 36px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; animation: fadeInUp 0.6s ease 0.15s both; }
+    .host-avatar { width: 100px; height: 100px; border-radius: 50%; background: #F4C0D1; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-family: 'DM Serif Display', serif; font-size: 32px; color: #993356; }
+    .host-name { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 4px; }
+    .host-title { font-size: 13px; color: #D85A8A; margin-bottom: 16px; }
+    .host-bio-short { font-size: 13px; color: #555; line-height: 1.6; max-width: 280px; margin: 0 auto 20px; }
+    .social-row { display: flex; gap: 10px; justify-content: center; }
+    .social-btn { padding: 7px 14px; border-radius: 20px; font-size: 12px; border: 0.5px solid #e0e0e0; cursor: pointer; font-family: 'DM Sans', sans-serif; background: white; color: #666; transition: all 0.3s ease; }
+    .social-btn:hover { border-color: #D85A8A; color: #D85A8A; transform: scale(1.05); }
+
+    .mission-section { padding: 40px max(32px, calc((100% - 960px) / 2)); background: #f7f7f5; border-bottom: 0.5px solid #e0e0e0; }
+    .mission-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+    .mission-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
+    .mission-quote { font-family: 'DM Serif Display', serif; font-size: 26px; line-height: 1.4; font-style: italic; margin-bottom: 12px; }
+    .mission-body { font-size: 13px; color: #666; line-height: 1.7; }
+
+    .values-wrap { border-bottom: 0.5px solid #e0e0e0; }
+    .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 960px; margin: 0 auto; }
+    .value-item { padding: 28px 22px; border-right: 0.5px solid #e0e0e0; transition: background 0.3s ease; }
+    .value-item:last-child { border-right: none; }
+    .value-item:hover { background: #fafafa; }
+    .value-icon { font-size: 20px; margin-bottom: 10px; }
+    .value-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+    .value-desc { font-size: 12px; color: #666; line-height: 1.5; }
+
+    .section { padding: 36px max(32px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; }
+    .section-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 8px; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 6px; }
+    .section-sub { font-size: 13px; color: #666; margin-bottom: 28px; }
+
+    .booking-bar { background: #FCF0F5; border: 0.5px solid #F4C0D1; border-radius: 14px; padding: 28px 32px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; margin-bottom: 28px; }
+    .booking-h { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 6px; }
+    .booking-sub { font-size: 13px; color: #555; line-height: 1.5; }
+    .booking-btn { background: #D85A8A; color: white; border: none; padding: 13px 24px; border-radius: 22px; font-size: 13px; font-family: 'DM Sans', sans-serif; cursor: pointer; white-space: nowrap; transition: background 0.3s ease, transform 0.2s ease; }
+    .booking-btn:hover { background: #c44d7a; transform: scale(1.03); }
+
+    .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 28px; }
+    .work-card { background: white; border: 0.5px solid #e0e0e0; border-radius: 12px; padding: 20px; transition: box-shadow 0.3s ease, transform 0.2s ease; }
+    .work-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); transform: translateY(-2px); }
+    .work-card.featured { border-color: #F4C0D1; background: #FCF0F5; }
+    .work-icon { font-size: 20px; margin-bottom: 10px; }
+    .work-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+    .work-desc { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 14px; }
+    .work-cta { font-size: 12px; color: #D85A8A; font-weight: 500; cursor: pointer; transition: color 0.2s ease; }
+    .work-cta:hover { color: #993356; }
+
+    .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .contact-card { background: #f7f7f5; border: 0.5px solid #e0e0e0; border-radius: 12px; padding: 20px; transition: box-shadow 0.3s ease; }
+    .contact-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .contact-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #666; margin-bottom: 8px; }
+    .contact-h { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+    .contact-desc { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 14px; }
+    .contact-link { font-size: 12px; color: #D85A8A; font-weight: 500; cursor: pointer; transition: color 0.2s ease; }
+    .contact-link:hover { color: #993356; }
+
+    .form-section { padding: 36px max(32px, calc((100% - 960px) / 2)); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-full { grid-column: 1 / -1; }
+    .form-label { font-size: 12px; color: #666; margin-bottom: 5px; display: block; }
+    .form-input { width: 100%; border: 0.5px solid #e0e0e0; border-radius: 8px; padding: 10px 14px; font-size: 13px; font-family: 'DM Sans', sans-serif; background: white; color: #1a1a1a; outline: none; transition: border-color 0.3s ease; }
+    .form-input:focus { border-color: #D85A8A; }
+    .form-textarea { width: 100%; border: 0.5px solid #e0e0e0; border-radius: 8px; padding: 10px 14px; font-size: 13px; font-family: 'DM Sans', sans-serif; background: white; color: #1a1a1a; outline: none; resize: vertical; min-height: 90px; transition: border-color 0.3s ease; }
+    .form-textarea:focus { border-color: #D85A8A; }
+    .form-submit { background: #D85A8A; color: white; border: none; padding: 12px 28px; border-radius: 22px; font-size: 13px; font-family: 'DM Sans', sans-serif; cursor: pointer; margin-top: 4px; transition: background 0.3s ease, transform 0.2s ease; }
+    .form-submit:hover { background: #c44d7a; transform: scale(1.03); }
+
+    /* FOOTER */
+    .footer { margin-top: auto; padding: 24px max(32px, calc((100% - 960px) / 2)); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 15px; color: #1a1a1a; text-decoration: none; }
+    .footer-logo span { font-style: italic; color: #D85A8A; }
+    .footer-links { display: flex; gap: 16px; }
+    .footer-links a { color: #666; text-decoration: none; font-size: 12px; transition: color 0.2s ease; }
+    .footer-links a:hover { color: #D85A8A; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 16px 28px; gap: 14px; border-bottom: 0.5px solid #e0e0e0; z-index: 99; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+      .nav-links.open { display: flex; }
+      .nav-right { gap: 10px; }
+      .nav-cta { font-size: 11px; padding: 6px 12px; }
+      .nav { padding: 12px 20px; }
+      .about-hero { grid-template-columns: 1fr; }
+      .about-left { padding: 32px 20px; }
+      .about-right { padding: 32px 20px; }
+      .page-h1 { font-size: 28px; }
+      .mission-quote { font-size: 22px; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .value-item { border-bottom: 0.5px solid #e0e0e0; }
+      .section { padding: 28px 20px; }
+      .section-title { font-size: 22px; }
+      .booking-bar { grid-template-columns: 1fr; text-align: center; }
+      .booking-h { font-size: 18px; }
+      .work-grid { grid-template-columns: 1fr; }
+      .contact-row { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-section { padding: 28px 20px; }
+      .footer { flex-direction: column; gap: 12px; text-align: center; padding: 20px; }
+    }
+    @media (max-width: 480px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .about-left { padding: 24px 16px; }
+      .about-right { padding: 24px 16px; }
+      .page-h1 { font-size: 24px; }
+      .section { padding: 24px 16px; }
+      .mission-section { padding: 32px 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+<nav class="nav">
+  <a href="/" class="nav-logo">Diary of <span>A Breastie</span></a>
+  <ul class="nav-links">
+    <li><a href="/listen">Listen</a></li>
+    <li><a href="/library">Breastie Library</a></li>
+    <li><a href="/programs">Wellness Programs</a></li>
+    <li><a href="/newsletter">Newsletter</a></li>
+    <li><a href="/about" class="active">About</a></li>
+  </ul>
+  <div class="nav-right">
+      <a href="/work-with-me" class="nav-cta">Work With Me</a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+</nav>
+
+<div class="about-hero-wrap">
+<div class="about-hero">
+  <div class="about-left">
+    <div class="page-eyebrow">About</div>
+    <h1 class="page-h1">The story<br>behind the <em>mic.</em></h1>
+    <div class="about-body">
+      <p>Diary of a Breastie was born out of a simple but powerful belief — that every breast cancer survivor's story deserves to be heard, honored, and amplified.</p>
+      <p>What started as a platform for honest conversation has grown into a full community: a podcast, a newsletter, a resource library, and a wellness coaching practice — all centered on helping survivors and women everywhere heal, thrive, and find joy again.</p>
+      <p>The mission has always been clear: real stories, real strength. No sugar-coating. No toxic positivity. Just honest, faith-grounded, community-driven support for the journey of survivorship and healing.</p>
+      <p>Whether you're newly diagnosed, in the thick of treatment, or years into remission — there's a seat at this table for you. You are not alone.</p>
+    </div>
+  </div>
+  <div class="about-right">
+    <div class="host-avatar">✍</div>
+    <div class="host-name">Your Host</div>
+    <div class="host-title">Podcast Host · Gut Health Coach · Breastie</div>
+    <div class="host-bio-short">Faith-driven wellness entrepreneur, storyteller, and gut health coach on a mission to amplify the voices of breast cancer survivors everywhere.</div>
+    <div class="social-row">
+      <button class="social-btn">TikTok</button>
+      <button class="social-btn">YouTube</button>
+      <button class="social-btn">Instagram</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="mission-section">
+  <div class="mission-inner">
+    <div class="mission-label">Our mission</div>
+    <div class="mission-quote">"Real stories. Real strength."</div>
+    <div class="mission-body">Diary of a Breastie exists to make sure no survivor has to navigate her journey in silence. Through honest storytelling, wellness education, and a community built on faith and resilience — we're here for every chapter of the journey.</div>
+  </div>
+</div>
+
+<div class="values-wrap">
+<div class="values-grid">
+  <div class="value-item"><div class="value-icon">🤍</div><div class="value-title">Authentic storytelling</div><div class="value-desc">We tell real stories without filters — the hard parts, the healing, and everything in between.</div></div>
+  <div class="value-item"><div class="value-icon">🌿</div><div class="value-title">Whole-body wellness</div><div class="value-desc">Healing is physical, emotional, and spiritual. We honor all of it.</div></div>
+  <div class="value-item"><div class="value-icon">✝️</div><div class="value-title">Faith-grounded</div><div class="value-desc">Faith isn't a backdrop here — it's woven into how we approach healing, purpose, and community.</div></div>
+  <div class="value-item"><div class="value-icon">👩🏾‍🤝‍👩🏽</div><div class="value-title">Community first</div><div class="value-desc">No survivor should walk her journey alone. We build spaces where women show up for each other.</div></div>
+</div>
+</div>
+
+<div class="section">
+  <div class="section-label">Work With Me</div>
+  <div class="section-title">Let's work together</div>
+  <div class="section-sub">Whether you're a survivor ready to heal, a brand aligned with this mission, or a conference looking for a speaker — here's how we can connect.</div>
+  <div class="booking-bar">
+    <div>
+      <div class="booking-h">Book a free discovery call</div>
+      <div class="booking-sub">A 20-minute conversation to explore gut health coaching — no pressure, just a chance to connect and see if it's the right fit for you.</div>
+    </div>
+    <button class="booking-btn">Book your call →</button>
+  </div>
+  <div class="work-grid">
+    <div class="work-card featured"><div class="work-icon">🌿</div><div class="work-title">Gut health coaching</div><div class="work-desc">1:1 coaching for breast cancer survivors and women ready to heal their gut and reclaim their energy.</div><div class="work-cta">Learn more & apply →</div></div>
+    <div class="work-card"><div class="work-icon">🎤</div><div class="work-title">Speaking engagements</div><div class="work-desc">Available for conferences, summits, health events, and community programs focused on survivorship and wellness.</div><div class="work-cta">Inquire about speaking →</div></div>
+    <div class="work-card"><div class="work-icon">🤝</div><div class="work-title">Brand partnerships</div><div class="work-desc">Partnering with aligned wellness brands to bring valuable resources to the Breastie community authentically.</div><div class="work-cta">Explore partnerships →</div></div>
+  </div>
+  <div class="contact-row">
+    <div class="contact-card"><div class="contact-label">Podcast guest inquiries</div><div class="contact-h">Want to share your story on the podcast?</div><div class="contact-desc">Survivors, healthcare professionals, and wellness experts are welcome.</div><div class="contact-link">Submit a guest inquiry →</div></div>
+    <div class="contact-card"><div class="contact-label">General contact</div><div class="contact-h">Just want to reach out?</div><div class="contact-desc">For general questions, media requests, or just to say hello — use the form below.</div><div class="contact-link">Send a message →</div></div>
+  </div>
+</div>
+
+<div class="form-section">
+  <div class="section-label">Get in touch</div>
+  <div style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:6px">Send a message</div>
+  <p style="font-size:13px;color:#666;margin-bottom:24px">Fill out the form and we'll get back to you within 2–3 business days.</p>
+  <div class="form-grid">
+    <div><label class="form-label">First name</label><input class="form-input" type="text" placeholder="Your first name"/></div>
+    <div><label class="form-label">Last name</label><input class="form-input" type="text" placeholder="Your last name"/></div>
+    <div><label class="form-label">Email address</label><input class="form-input" type="email" placeholder="your@email.com"/></div>
+    <div><label class="form-label">Inquiry type</label><select class="form-input"><option>Gut health coaching</option><option>Speaking engagement</option><option>Brand partnership</option><option>Podcast guest inquiry</option><option>General question</option></select></div>
+    <div class="form-full"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell us a little about yourself and what you're looking for..."></textarea></div>
+    <div class="form-full"><button class="form-submit">Send message →</button></div>
+  </div>
+</div>
+
+  <div class="footer">
+    <a href="/" class="footer-logo">Diary of <span>A Breastie</span></a>
+    <div class="footer-links">
+      <a href="/listen">Podcast</a>
+      <a href="/newsletter">Newsletter</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+    </div>
+    <div>&copy; 2026 Diary of a Breastie</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work With Me — Diary of a Breastie</title>
+  <meta name="description" content="Work with Diary of a Breastie — gut health coaching, speaking engagements, brand partnerships, and organizational wellness programs. Book a free discovery call today.">
+  <meta name="keywords" content="work with me, gut health coaching, speaking engagements, brand partnerships, wellness coaching, Diary of a Breastie">
+  <meta name="author" content="Diary of a Breastie">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diaryofabreastie.com/work-with-me">
+  <meta property="og:title" content="Work With Me — Diary of a Breastie">
+  <meta property="og:description" content="Gut health coaching, speaking engagements, and brand partnerships. Let's work together.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diaryofabreastie.com/work-with-me">
+  <meta property="og:site_name" content="Diary of a Breastie">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Work With Me — Diary of a Breastie">
+  <meta name="twitter:description" content="Gut health coaching, speaking engagements, and brand partnerships.">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1a1a1a; background: #fff; }
+    .page-wrapper { margin: 0 auto; background: #fff; padding-top: 52px; min-height: 100vh; display: flex; flex-direction: column; }
+
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px max(28px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; position: fixed; top: 0; left: 0; width: 100%; background: #fff; z-index: 100; }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 15px; text-decoration: none; color: #1a1a1a; }
+    .nav-logo span { font-style: italic; color: #D85A8A; }
+    .nav-links { display: flex; gap: 20px; list-style: none; font-size: 13px; color: #666; }
+    .nav-links a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+    .nav-links a:hover { color: #D85A8A; }
+    .nav-cta { background: #993356; color: white; border: none; padding: 8px 16px; border-radius: 20px; font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.3s ease, transform 0.2s ease; text-decoration: none; display: inline-block; }
+    .nav-cta:hover { background: #b13d6a; transform: scale(1.03); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; }
+
+    .page-hero { padding: 52px max(32px, calc((100% - 960px) / 2)) 44px; background: #FCF0F5; border-bottom: 0.5px solid #e0e0e0; text-align: center; animation: fadeInUp 0.6s ease; }
+    .page-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
+    .page-h1 { font-family: 'DM Serif Display', serif; font-size: 40px; line-height: 1.1; margin-bottom: 14px; }
+    .page-h1 em { font-style: italic; color: #D85A8A; }
+    .page-sub { font-size: 14px; color: #555; max-width: 500px; line-height: 1.7; margin: 0 auto 28px; }
+    .hero-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .hero-btn { padding: 10px 20px; border-radius: 22px; font-size: 13px; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; }
+    .btn-pink { background: #D85A8A; color: white; border: none; }
+    .btn-pink:hover { background: #c44d7a; transform: scale(1.03); }
+    .btn-outline { background: transparent; color: #1a1a1a; border: 0.5px solid #aaa; }
+    .btn-outline:hover { border-color: #D85A8A; color: #D85A8A; transform: scale(1.03); }
+
+    .ways-wrap { border-bottom: 0.5px solid #e0e0e0; }
+    .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 960px; margin: 0 auto; }
+    .way-card { padding: 36px 28px; border-right: 0.5px solid #e0e0e0; transition: background 0.3s ease; }
+    .way-card:last-child { border-right: none; }
+    .way-card.featured { background: #FCF0F5; }
+    .way-icon { font-size: 22px; margin-bottom: 12px; }
+    .way-tag { display: inline-block; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+    .tag-pink { background: #F4C0D1; color: #72243E; }
+    .tag-purple { background: #EEEDFE; color: #3C3489; }
+    .tag-teal { background: #E1F5EE; color: #0F6E56; }
+    .way-h { font-family: 'DM Serif Display', serif; font-size: 20px; margin-bottom: 8px; }
+    .way-desc { font-size: 13px; color: #555; line-height: 1.7; margin-bottom: 16px; }
+    .way-cta { font-size: 13px; color: #D85A8A; font-weight: 500; cursor: pointer; background: none; border: none; font-family: 'DM Sans', sans-serif; padding: 0; transition: color 0.2s ease; }
+    .way-cta:hover { color: #993356; }
+
+    .booking-wrap { border-bottom: 0.5px solid #e0e0e0; }
+    .booking-section { display: grid; grid-template-columns: 1fr 1fr; max-width: 960px; margin: 0 auto; }
+    .booking-left { padding: 44px 36px; }
+    .sec-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
+    .sec-h { font-family: 'DM Serif Display', serif; font-size: 28px; line-height: 1.2; margin-bottom: 12px; }
+    .sec-body { font-size: 13px; color: #555; line-height: 1.7; margin-bottom: 20px; }
+    .booking-btn { background: #D85A8A; color: white; border: none; padding: 12px 24px; border-radius: 22px; font-size: 13px; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: background 0.3s ease, transform 0.2s ease; }
+    .booking-btn:hover { background: #c44d7a; transform: scale(1.03); }
+    .booking-right { background: #f7f7f5; padding: 44px 36px; display: flex; flex-direction: column; justify-content: center; }
+    .booking-note-h { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+    .booking-note-body { font-size: 13px; color: #555; line-height: 1.6; }
+
+    .form-section { padding: 36px max(32px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 620px; }
+    .form-full { grid-column: 1 / -1; }
+    .form-label { font-size: 12px; color: #666; margin-bottom: 5px; display: block; }
+    .form-input { width: 100%; border: 0.5px solid #e0e0e0; border-radius: 8px; padding: 10px 14px; font-size: 13px; font-family: 'DM Sans', sans-serif; background: white; color: #1a1a1a; outline: none; transition: border-color 0.3s ease; }
+    .form-input:focus { border-color: #D85A8A; }
+    .form-textarea { width: 100%; border: 0.5px solid #e0e0e0; border-radius: 8px; padding: 10px 14px; font-size: 13px; font-family: 'DM Sans', sans-serif; background: white; color: #1a1a1a; outline: none; resize: vertical; min-height: 90px; transition: border-color 0.3s ease; }
+    .form-textarea:focus { border-color: #D85A8A; }
+    .form-submit { background: #D85A8A; color: white; border: none; padding: 12px 28px; border-radius: 22px; font-size: 13px; font-family: 'DM Sans', sans-serif; cursor: pointer; margin-top: 4px; transition: background 0.3s ease, transform 0.2s ease; }
+    .form-submit:hover { background: #c44d7a; transform: scale(1.03); }
+
+    /* FOOTER */
+    .footer { margin-top: auto; padding: 24px max(32px, calc((100% - 960px) / 2)); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 15px; color: #1a1a1a; text-decoration: none; }
+    .footer-logo span { font-style: italic; color: #D85A8A; }
+    .footer-links { display: flex; gap: 16px; }
+    .footer-links a { color: #666; text-decoration: none; font-size: 12px; transition: color 0.2s ease; }
+    .footer-links a:hover { color: #D85A8A; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 16px 28px; gap: 14px; border-bottom: 0.5px solid #e0e0e0; z-index: 99; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+      .nav-links.open { display: flex; }
+      .nav-right { gap: 10px; }
+      .nav-cta { font-size: 11px; padding: 6px 12px; }
+      .nav { padding: 12px 20px; }
+      .page-hero { padding: 36px 20px; }
+      .page-h1 { font-size: 30px; }
+      .ways-grid { grid-template-columns: 1fr; }
+      .way-card { border-right: none; border-bottom: 0.5px solid #e0e0e0; padding: 28px 20px; }
+      .way-card:last-child { border-bottom: none; }
+      .booking-section { grid-template-columns: 1fr; }
+      .booking-left { padding: 28px 20px; }
+      .booking-right { padding: 28px 20px; }
+      .form-section { padding: 28px 20px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .footer { flex-direction: column; gap: 12px; text-align: center; padding: 20px; }
+    }
+    @media (max-width: 480px) {
+      .page-h1 { font-size: 26px; }
+      .page-hero { padding: 28px 16px; }
+      .way-card { padding: 24px 16px; }
+      .booking-left { padding: 24px 16px; }
+      .booking-right { padding: 24px 16px; }
+      .form-section { padding: 24px 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+<nav class="nav">
+  <a href="/" class="nav-logo">Diary of <span>A Breastie</span></a>
+  <ul class="nav-links">
+    <li><a href="/listen">Listen</a></li>
+    <li><a href="/library">Breastie Library</a></li>
+    <li><a href="/programs">Wellness Programs</a></li>
+    <li><a href="/newsletter">Newsletter</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+  <div class="nav-right">
+      <a href="/work-with-me" class="nav-cta">Work With Me</a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-eyebrow">Work With Me</div>
+  <h1 class="page-h1">Let's do something <em>meaningful.</em></h1>
+  <p class="page-sub">Whether you're a survivor looking for gut health coaching, a brand that shares our mission, or an organization ready to bring wellness to your community — there's a way to work together.</p>
+  <div class="hero-btns">
+    <button class="hero-btn btn-pink">Book a discovery call</button>
+    <button class="hero-btn btn-outline">Send an inquiry</button>
+  </div>
+</div>
+
+<div class="ways-wrap">
+<div class="ways-grid">
+  <div class="way-card featured">
+    <div class="way-icon">🌿</div>
+    <span class="way-tag tag-pink">Most popular</span>
+    <div class="way-h">Gut Health Coaching</div>
+    <div class="way-desc">1:1 coaching for breast cancer survivors and women ready to heal their gut, restore energy, and feel at home in their bodies again. Personalized protocols for where you are in your journey.</div>
+    <button class="way-cta">Learn more & apply →</button>
+  </div>
+  <div class="way-card">
+    <div class="way-icon">🎤</div>
+    <span class="way-tag tag-purple">Engagements</span>
+    <div class="way-h">Speaking & Events</div>
+    <div class="way-desc">Available for conferences, summits, health events, church groups, and community programs focused on survivorship, wellness, gut health, and faith-grounded healing.</div>
+    <button class="way-cta">Inquire about speaking →</button>
+  </div>
+  <div class="way-card">
+    <div class="way-icon">🤝</div>
+    <span class="way-tag tag-teal">Partnerships</span>
+    <div class="way-h">Brand & Org Partnerships</div>
+    <div class="way-desc">Partnering with aligned wellness brands, nonprofits, and organizations to bring valuable resources to the Breastie community authentically and meaningfully.</div>
+    <button class="way-cta">Explore partnerships →</button>
+  </div>
+</div>
+</div>
+
+<div class="booking-wrap">
+<div class="booking-section">
+  <div class="booking-left">
+    <div class="sec-eyebrow">Start here</div>
+    <div class="sec-h">Book a free<br>discovery call</div>
+    <div class="sec-body">A free 20-minute conversation to explore gut health coaching, speaking opportunities, or partnership possibilities — no pressure, just a chance to connect and see if we're the right fit.</div>
+    <button class="booking-btn">Book your call →</button>
+  </div>
+  <div class="booking-right">
+    <div class="booking-note-h">What to expect</div>
+    <div class="booking-note-body">This is a low-pressure conversation where we get to know each other, discuss your goals, and figure out the best path forward — whether that's coaching, a speaking engagement, or a brand collaboration. No commitment required.</div>
+  </div>
+</div>
+</div>
+
+<div class="form-section">
+  <div class="sec-eyebrow">Get in touch</div>
+  <div style="font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:6px">Send a message</div>
+  <p style="font-size:13px;color:#666;margin-bottom:24px">Prefer email? Fill out the form below and we'll get back to you within 2–3 business days.</p>
+  <div class="form-grid">
+    <div><label class="form-label">First name</label><input class="form-input" type="text" placeholder="Your first name"/></div>
+    <div><label class="form-label">Last name</label><input class="form-input" type="text" placeholder="Your last name"/></div>
+    <div><label class="form-label">Email address</label><input class="form-input" type="email" placeholder="your@email.com"/></div>
+    <div><label class="form-label">Inquiry type</label><select class="form-input"><option>Gut health coaching</option><option>Speaking engagement</option><option>Brand partnership</option><option>Organizational partnership</option><option>General question</option></select></div>
+    <div class="form-full"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell us a little about yourself and what you're looking for..."></textarea></div>
+    <div class="form-full"><button class="form-submit">Send message →</button></div>
+  </div>
+</div>
+
+  <div class="footer">
+    <a href="/" class="footer-logo">Diary of <span>A Breastie</span></a>
+    <div class="footer-links">
+      <a href="/listen">Podcast</a>
+      <a href="/newsletter">Newsletter</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+    </div>
+    <div>&copy; 2026 Diary of a Breastie</div>
+  </div>
+
+</div>
+</body>
+</html>

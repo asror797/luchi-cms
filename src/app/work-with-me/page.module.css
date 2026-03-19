@@ -1,0 +1,476 @@
+/* ── fadeInUp animation ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════
+   1. PAGE HERO
+   ══════════════════════════════════════ */
+.hero {
+  background: #FCF0F5;
+  padding: 72px 24px 56px;
+  text-align: center;
+  animation: fadeInUp 0.6s ease;
+}
+
+.heroInner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #D85A8A;
+  margin-bottom: 12px;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.heroTitleItalic {
+  font-style: italic;
+  color: #D85A8A;
+}
+
+.heroSub {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPink {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #D85A8A;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btnPink:hover {
+  background: #c44d7a;
+  transform: scale(1.03);
+}
+
+.btnOutline {
+  display: inline-block;
+  padding: 12px 28px;
+  background: transparent;
+  color: #D85A8A;
+  border: 1.5px solid #D85A8A;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btnOutline:hover {
+  background: #D85A8A;
+  color: #fff;
+  transform: scale(1.03);
+}
+
+/* ══════════════════════════════════════
+   2. WAYS TO WORK GRID
+   ══════════════════════════════════════ */
+.waysSection {
+  padding: 72px 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  animation: fadeInUp 0.6s ease 0.15s both;
+}
+
+.waysSectionTitle {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+}
+
+.waysGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wayCard {
+  padding: 36px 28px;
+  border-right: 1px solid #e0e0e0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wayCard:last-child {
+  border-right: none;
+}
+
+.wayCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.wayCardFeatured {
+  background: #FCF0F5;
+  border-radius: 14px;
+  border-right: none;
+}
+
+.wayCardFeatured + .wayCard {
+  border-right: 1px solid #e0e0e0;
+}
+
+.wayCardEmoji {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.tagPink {
+  background: #F4C0D1;
+  color: #72243E;
+}
+
+.tagPurple {
+  background: #EEEDFE;
+  color: #3C3489;
+}
+
+.tagTeal {
+  background: #E1F5EE;
+  color: #0F6E56;
+}
+
+.wayCardTitle {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.wayCardDesc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ══════════════════════════════════════
+   3. BOOKING SECTION
+   ══════════════════════════════════════ */
+.bookingSection {
+  padding: 72px 24px;
+  background: #fff;
+  animation: fadeInUp 0.6s ease 0.15s both;
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.bookingLeft {}
+
+.bookingEyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #D85A8A;
+  margin-bottom: 12px;
+}
+
+.bookingHeading {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  line-height: 1.3;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.bookingBody {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.bookingBtn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #D85A8A;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.bookingBtn:hover {
+  background: #c44d7a;
+  transform: scale(1.03);
+}
+
+.bookingRight {
+  background: #f7f7f5;
+  border-radius: 14px;
+  padding: 32px;
+}
+
+.bookingRightHeading {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: #1a1a1a;
+  margin-bottom: 14px;
+}
+
+.bookingRightBody {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ══════════════════════════════════════
+   4. CONTACT FORM
+   ══════════════════════════════════════ */
+.contactSection {
+  padding: 72px 24px;
+  background: #f7f7f5;
+  animation: fadeInUp 0.6s ease 0.15s both;
+}
+
+.contactInner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contactHeading {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.contactSub {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroupFull {
+  grid-column: 1 / -1;
+}
+
+.formLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  padding: 10px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  color: #1a1a1a;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  border-color: #D85A8A;
+}
+
+.formTextarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.formSubmit {
+  grid-column: 1 / -1;
+  display: inline-block;
+  padding: 12px 32px;
+  background: #D85A8A;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  justify-self: start;
+}
+
+.formSubmit:hover {
+  background: #c44d7a;
+  transform: scale(1.03);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero {
+    padding: 56px 24px 48px;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .heroSub {
+    max-width: 100%;
+  }
+
+  .waysSection {
+    padding: 40px 24px;
+  }
+
+  .waysGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .wayCard {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 28px 24px;
+  }
+
+  .wayCard:last-child {
+    border-bottom: none;
+  }
+
+  .wayCardFeatured {
+    border-bottom: none;
+  }
+
+  .bookingSection {
+    padding: 40px 24px;
+  }
+
+  .bookingGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .waysSectionTitle {
+    font-size: 24px;
+  }
+
+  .bookingHeading {
+    font-size: 24px;
+  }
+
+  .contactSection {
+    padding: 48px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 44px 20px 36px;
+  }
+
+  .heroTitle {
+    font-size: 26px;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btnPink,
+  .btnOutline {
+    width: 100%;
+    text-align: center;
+  }
+
+  .waysSection,
+  .bookingSection,
+  .contactSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .wayCard {
+    padding: 24px 20px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formSubmit {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contactHeading {
+    font-size: 24px;
+  }
+
+  .bookingHeading {
+    font-size: 22px;
+  }
+}

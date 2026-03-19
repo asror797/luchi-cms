@@ -1,0 +1,389 @@
+/* ── Newsletter Page Styles ── */
+
+/* Hero Split */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+
+.heroLeft {
+  background: #f7f7f5;
+  padding: 64px 48px 64px calc(max(28px, (100% - 480px)));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroRight {
+  background: #FCF0F5;
+  padding: 64px calc(max(28px, (100% - 480px))) 64px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #D85A8A;
+  margin-bottom: 14px;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  line-height: 1.25;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.heroTitleItalic {
+  font-style: italic;
+  color: #D85A8A;
+}
+
+.heroSubtext {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+.listHeading {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.benefitList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #D85A8A;
+  flex-shrink: 0;
+}
+
+.frequencyNote {
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+}
+
+/* Signup Card */
+.signupCard {
+  background: #fff;
+  border: 1.5px solid #F4C0D1;
+  border-radius: 14px;
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeInUp 0.6s ease 0.15s both;
+}
+
+.cardHeading {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.cardSubtext {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
+.formGroup {
+  margin-bottom: 14px;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.input:focus {
+  border-color: #D85A8A;
+}
+
+.subscribeBtn {
+  width: 100%;
+  padding: 12px;
+  background: #D85A8A;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 6px;
+}
+
+.subscribeBtn:hover {
+  background: #c44d7a;
+  transform: scale(1.02);
+}
+
+.privacyNote {
+  font-size: 11px;
+  color: #888;
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+/* Past Issues */
+.pastIssues {
+  padding: 72px calc(max(28px, (100% - 960px) / 2));
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.sectionSubtext {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.issuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.issueCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.issueCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  transform: translateY(-3px);
+}
+
+.issueHeader {
+  background: #f7f7f5;
+  padding: 20px 22px;
+}
+
+.issueDate {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #D85A8A;
+  margin-bottom: 6px;
+}
+
+.issueTitle {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.35;
+}
+
+.issueDivider {
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.issueBody {
+  padding: 18px 22px 22px;
+}
+
+.issuePreview {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.readLink {
+  font-size: 13px;
+  font-weight: 500;
+  color: #D85A8A;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.readLink:hover {
+  color: #c44d7a;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #f7f7f5;
+  padding: 72px calc(max(28px, (100% - 960px) / 2));
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.testimonialCard {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 28px 24px;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.testimonialCard:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.stars {
+  color: #D85A8A;
+  font-size: 14px;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.testimonialText {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.testimonialRole {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .heroLeft {
+    padding: 40px 24px 32px;
+  }
+
+  .heroRight {
+    padding: 32px 24px 40px;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+  }
+
+  .issuesGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .pastIssues,
+  .testimonials {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroLeft {
+    padding: 32px 20px 24px;
+  }
+
+  .heroRight {
+    padding: 24px 20px 32px;
+  }
+
+  .heroTitle {
+    font-size: 26px;
+  }
+
+  .signupCard {
+    padding: 24px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .pastIssues,
+  .testimonials {
+    padding: 32px 20px;
+  }
+
+  .input,
+  .subscribeBtn {
+    font-size: 14px;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
