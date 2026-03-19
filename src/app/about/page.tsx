@@ -76,7 +76,7 @@ export default async function AboutPage() {
             {settings?.hostImage ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={urlFor(settings.hostImage).width(120).height(120).url()}
+                src={urlFor(settings.hostImage).width(160).height(160).url()}
                 alt={settings.hostName || "Host"}
                 style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "cover" }}
               />
@@ -84,44 +84,38 @@ export default async function AboutPage() {
               <span className={styles.hostAvatarEmoji}>✍</span>
             )}
           </div>
-          <p className={styles.hostLabel}>Your Host</p>
-          <h2 className={styles.hostName}>
-            {settings?.hostName || "Luchi Onyebueke"}
-          </h2>
+          <h2 className={styles.hostLabel}>Your Host</h2>
           <p className={styles.hostTitle}>
-            {settings?.hostTitle || "Podcast Host \u00B7 Gut Health Coach"}
+            {settings?.hostTitle || "Podcast Host \u00B7 Gut Health Coach \u00B7 Breastie"}
           </p>
           <p className={styles.hostBio}>
             {settings?.hostBio ||
-              "Luchi is a breast cancer survivor, certified gut health coach, and the voice behind Diary of a Breastie. She's passionate about helping women reclaim their wellness through faith, food, and honest conversation."}
+              "Faith-driven wellness entrepreneur, storyteller, and gut health coach on a mission to amplify the voices of breast cancer survivors everywhere."}
           </p>
           <div className={styles.socialButtons}>
             <a
-              href={settings?.tiktokUrl || "https://tiktok.com"}
+              href={settings?.tiktokUrl || "#"}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialBtn}
-              aria-label="TikTok"
             >
-              🎵
+              TikTok
             </a>
             <a
-              href={settings?.instagramUrl || "https://instagram.com"}
+              href={settings?.instagramUrl || "#"}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialBtn}
-              aria-label="Instagram"
             >
-              📷
+              YouTube
             </a>
             <a
-              href={settings?.facebookUrl || "https://facebook.com"}
+              href={settings?.facebookUrl || "#"}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialBtn}
-              aria-label="Facebook"
             >
-              📘
+              Instagram
             </a>
           </div>
         </div>
