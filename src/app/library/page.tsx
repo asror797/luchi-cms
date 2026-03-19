@@ -1,4 +1,4 @@
-import { client } from "@/sanity/lib/client";
+import { serverClient } from "@/sanity/lib/client";
 import {
   ALL_LIBRARY_ITEMS_QUERY,
   ALL_DOWNLOADS_QUERY,
@@ -14,11 +14,13 @@ export const metadata = {
     "Browse articles, free downloads, and wellness guides from Diary of a Breastie.",
 };
 
+export const revalidate = 60;
+
 export default async function LibraryPage() {
   const [articles, downloads, settings] = await Promise.all([
-    client.fetch(ALL_LIBRARY_ITEMS_QUERY),
-    client.fetch(ALL_DOWNLOADS_QUERY),
-    client.fetch(SITE_SETTINGS_QUERY),
+    serverClient.fetch(ALL_LIBRARY_ITEMS_QUERY),
+    serverClient.fetch(ALL_DOWNLOADS_QUERY),
+    serverClient.fetch(SITE_SETTINGS_QUERY),
   ]);
 
   return (

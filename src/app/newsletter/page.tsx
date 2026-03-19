@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
-import { client } from "@/sanity/lib/client";
+import { serverClient } from "@/sanity/lib/client";
 import {
   ALL_NEWSLETTER_ISSUES_QUERY,
   NEWSLETTER_TESTIMONIALS_QUERY,
@@ -35,11 +35,13 @@ interface Testimonial {
   name: string;
 }
 
+export const revalidate = 60;
+
 export default async function NewsletterPage() {
   const [issues, testimonials]: [NewsletterIssue[], Testimonial[]] =
     await Promise.all([
-      client.fetch(ALL_NEWSLETTER_ISSUES_QUERY),
-      client.fetch(NEWSLETTER_TESTIMONIALS_QUERY),
+      serverClient.fetch(ALL_NEWSLETTER_ISSUES_QUERY),
+      serverClient.fetch(NEWSLETTER_TESTIMONIALS_QUERY),
     ]);
 
   return (

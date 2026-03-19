@@ -3,7 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
-import { client } from "@/sanity/lib/client";
+import { serverClient } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import {
   SITE_SETTINGS_QUERY,
@@ -30,10 +30,12 @@ interface SiteSettings {
   calendlyUrl?: string;
 }
 
+export const revalidate = 60;
+
 export default async function AboutPage() {
   const [settings, _teamMembers]: [SiteSettings, unknown[]] = await Promise.all([
-    client.fetch(SITE_SETTINGS_QUERY),
-    client.fetch(ALL_TEAM_MEMBERS_QUERY),
+    serverClient.fetch(SITE_SETTINGS_QUERY),
+    serverClient.fetch(ALL_TEAM_MEMBERS_QUERY),
   ]);
 
   return (

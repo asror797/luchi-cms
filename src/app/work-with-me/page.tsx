@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
-import { client } from "@/sanity/lib/client";
+import { serverClient } from "@/sanity/lib/client";
 import { SITE_SETTINGS_QUERY } from "@/sanity/lib/queries";
 
 export const metadata: Metadata = {
@@ -16,8 +16,10 @@ interface SiteSettings {
   contactEmail?: string;
 }
 
+export const revalidate = 60;
+
 export default async function WorkWithMePage() {
-  const settings: SiteSettings = await client.fetch(SITE_SETTINGS_QUERY);
+  const settings: SiteSettings = await serverClient.fetch(SITE_SETTINGS_QUERY);
 
   const calendlyUrl = settings?.calendlyUrl || "#booking";
 

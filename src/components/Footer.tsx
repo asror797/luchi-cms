@@ -1,10 +1,10 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
-import { client } from "@/sanity/lib/client";
+import { serverClient } from "@/sanity/lib/client";
 import { SITE_SETTINGS_QUERY } from "@/sanity/lib/queries";
 
 export default async function Footer() {
-  const settings = await client.fetch(SITE_SETTINGS_QUERY);
+  const settings = await serverClient.fetch(SITE_SETTINGS_QUERY);
 
   return (
     <footer className={styles.footer}>

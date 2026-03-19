@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
-import { client } from "@/sanity/lib/client";
+import { serverClient } from "@/sanity/lib/client";
 import {
   ALL_WELLNESS_PROGRAMS_QUERY,
   PROGRAMS_TESTIMONIALS_QUERY,
@@ -81,12 +81,14 @@ interface FaqItem {
   answer: string;
 }
 
+export const revalidate = 60;
+
 export default async function ProgramsPage() {
   const [programs, testimonials, faqs]: [WellnessProgram[], Testimonial[], FaqItem[]] =
     await Promise.all([
-      client.fetch(ALL_WELLNESS_PROGRAMS_QUERY),
-      client.fetch(PROGRAMS_TESTIMONIALS_QUERY),
-      client.fetch(ALL_FAQ_ITEMS_QUERY),
+      serverClient.fetch(ALL_WELLNESS_PROGRAMS_QUERY),
+      serverClient.fetch(PROGRAMS_TESTIMONIALS_QUERY),
+      serverClient.fetch(ALL_FAQ_ITEMS_QUERY),
     ]);
 
   const getCheckCircleClass = (tagStyle?: string) => {

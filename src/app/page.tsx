@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AudioPlayer from "@/components/AudioPlayer";
 import styles from "./page.module.css";
-import { client } from "@/sanity/lib/client";
+import { serverClient } from "@/sanity/lib/client";
 import {
   SITE_SETTINGS_QUERY,
   FEATURED_EPISODE_QUERY,
@@ -12,14 +12,16 @@ import {
   ALL_WELLNESS_PROGRAMS_QUERY,
 } from "@/sanity/lib/queries";
 
+export const revalidate = 60;
+
 export default async function Home() {
   const [settings, featured, starters, testimonials, programs] =
     await Promise.all([
-      client.fetch(SITE_SETTINGS_QUERY),
-      client.fetch(FEATURED_EPISODE_QUERY),
-      client.fetch(STARTER_EPISODES_QUERY),
-      client.fetch(HOMEPAGE_TESTIMONIALS_QUERY),
-      client.fetch(ALL_WELLNESS_PROGRAMS_QUERY),
+      serverClient.fetch(SITE_SETTINGS_QUERY),
+      serverClient.fetch(FEATURED_EPISODE_QUERY),
+      serverClient.fetch(STARTER_EPISODES_QUERY),
+      serverClient.fetch(HOMEPAGE_TESTIMONIALS_QUERY),
+      serverClient.fetch(ALL_WELLNESS_PROGRAMS_QUERY),
     ]);
 
   // Parse hero title: *word* becomes <em>word</em>

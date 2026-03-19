@@ -2,7 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
-import { client } from "@/sanity/lib/client";
+import { serverClient } from "@/sanity/lib/client";
 import {
   SITE_SETTINGS_QUERY,
   STARTER_EPISODES_QUERY,
@@ -34,12 +34,14 @@ interface SiteSettings {
   amazonMusicUrl?: string;
 }
 
+export const revalidate = 60;
+
 export default async function ListenPage() {
   const [settings, starters, allEpisodes]: [SiteSettings, Episode[], Episode[]] =
     await Promise.all([
-      client.fetch(SITE_SETTINGS_QUERY),
-      client.fetch(STARTER_EPISODES_QUERY),
-      client.fetch(ALL_EPISODES_QUERY),
+      serverClient.fetch(SITE_SETTINGS_QUERY),
+      serverClient.fetch(STARTER_EPISODES_QUERY),
+      serverClient.fetch(ALL_EPISODES_QUERY),
     ]);
 
   const recentEpisodes = allEpisodes
