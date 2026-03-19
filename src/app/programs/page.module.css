@@ -317,12 +317,35 @@
 
 /* Process Steps */
 .process {
-  padding: 72px calc(max(28px, (100% - 960px) / 2));
+  padding: 36px max(32px, calc((100% - 960px) / 2));
+  border-bottom: 0.5px solid #e0e0e0;
+}
+
+.processEyebrow {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #D85A8A;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.processHeading {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.processSubtext {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 24px;
 }
 
 .sectionTitle {
   font-family: var(--font-serif);
-  font-size: 26px;
+  font-size: 24px;
   color: #1a1a1a;
   text-align: center;
   margin-bottom: 12px;
@@ -338,31 +361,35 @@
 .stepsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
 }
 
 .stepCard {
-  text-align: left;
+  padding: 20px;
+  border-right: 0.5px solid #e0e0e0;
+}
+
+.stepCard:last-child {
+  border-right: none;
 }
 
 .stepNumber {
-  font-family: var(--font-serif);
   font-size: 28px;
+  font-family: var(--font-serif);
   color: #F4C0D1;
-  margin-bottom: 14px;
-}
-
-.stepTitle {
-  font-size: 15px;
-  font-weight: 500;
-  color: #1a1a1a;
   margin-bottom: 8px;
 }
 
-.stepDesc {
+.stepTitle {
   font-size: 13px;
-  color: #555;
-  line-height: 1.6;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.stepDesc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
 }
 
 /* Client Testimonials */
@@ -581,7 +608,19 @@
 
   .stepsGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  }
+
+  .stepCard {
+    border-right: none;
+    border-bottom: 0.5px solid #e0e0e0;
+  }
+
+  .stepCard:nth-child(odd) {
+    border-right: 0.5px solid #e0e0e0;
+  }
+
+  .stepCard:nth-child(n+3) {
+    border-bottom: none;
   }
 
   .testimonialsGrid {
@@ -633,6 +672,19 @@
 
   .stepsGrid {
     grid-template-columns: 1fr;
+  }
+
+  .stepCard {
+    border-right: none;
+    border-bottom: 0.5px solid #e0e0e0;
+  }
+
+  .stepCard:nth-child(odd) {
+    border-right: none;
+  }
+
+  .stepCard:last-child {
+    border-bottom: none;
   }
 
   .statsGrid {

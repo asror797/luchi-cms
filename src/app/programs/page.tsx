@@ -35,23 +35,23 @@ const CheckIcon = ({ color = "#fff" }: { color?: string }) => (
 const processSteps = [
   {
     num: "01",
-    title: "Apply or Inquire",
-    desc: "Fill out a short application so we can understand your unique needs and goals.",
+    title: "Book a discovery call",
+    desc: "A free 20-minute conversation for individuals or organizations to explore the right fit.",
   },
   {
     num: "02",
-    title: "Discovery Call",
-    desc: "We'll hop on a free 20-minute call to see if we're the right fit for each other.",
+    title: "Complete your intake",
+    desc: "Share your health history, goals, and what's not working so we can build your plan.",
   },
   {
     num: "03",
-    title: "Custom Plan",
-    desc: "Receive a personalized program roadmap designed around your health journey.",
+    title: "Start your program",
+    desc: "Begin 1:1 or group coaching sessions with a clear roadmap tailored to your goals.",
   },
   {
     num: "04",
-    title: "Begin Healing",
-    desc: "Start your program with ongoing support, accountability, and community.",
+    title: "Feel the shift",
+    desc: "More energy. Better digestion. A body you feel at home in. That's what we're working toward.",
   },
 ];
 
@@ -182,15 +182,15 @@ export default async function ProgramsPage() {
         <section className={styles.nonprofit}>
           <div className={styles.nonprofitInner}>
             <div>
-              <p className={styles.eyebrowTeal}>NONPROFIT MISSION</p>
+              <p className={styles.eyebrowTeal}>Organizational Partnerships</p>
               <h2 className={styles.nonprofitHeading}>
-                Wellness is our mission — not a product.
+                Bringing wellness to the communities that need it most
               </h2>
               <p className={styles.nonprofitBody}>
-                As a faith-integrated wellness nonprofit, every program we offer
-                is designed to make holistic healing accessible. We believe that
-                survivorship doesn&apos;t end at the last treatment — and
-                neither should support.
+                Every nonprofit, cancer support group, church, and organization serves women who deserve
+                access to gut health education and support. Organizational partnerships are fully customized —
+                whether that&apos;s a one-time workshop, an ongoing program, or subsidized coaching for your
+                members.
               </p>
             </div>
             <div className={styles.statsGrid}>
@@ -212,9 +212,10 @@ export default async function ProgramsPage() {
 
         {/* -- Process Steps -- */}
         <section className={styles.process}>
-          <h2 className={styles.sectionTitle}>How it works</h2>
-          <p className={styles.sectionSubtext}>
-            Getting started is simple — here&apos;s what to expect.
+          <div className={styles.processEyebrow}>How it works</div>
+          <h2 className={styles.processHeading}>Your journey to feeling well</h2>
+          <p className={styles.processSubtext}>
+            A simple, supported process from first call to lasting results.
           </p>
           <div className={styles.stepsGrid}>
             {processSteps.map((step) => (
