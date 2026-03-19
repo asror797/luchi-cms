@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
@@ -9,7 +8,7 @@ import { SITE_SETTINGS_QUERY } from "@/sanity/lib/queries";
 export const metadata: Metadata = {
   title: "Work With Me",
   description:
-    "Explore ways to work with Diary of a Breastie — gut health coaching, speaking engagements, brand partnerships, and more.",
+    "Work with Diary of a Breastie — gut health coaching, speaking engagements, brand partnerships, and organizational wellness programs.",
 };
 
 interface SiteSettings {
@@ -26,214 +25,142 @@ export default async function WorkWithMePage() {
     <>
       <Navbar />
 
-      {/* -- 1. Page Hero -- */}
-      <section className={styles.hero}>
-        <div className={styles.heroInner}>
-          <p className={styles.eyebrow}>WORK WITH ME</p>
-          <h1 className={styles.heroTitle}>
-            Let&apos;s do something{" "}
-            <span className={styles.heroTitleItalic}>meaningful.</span>
-          </h1>
-          <p className={styles.heroSub}>
-            Whether you&apos;re looking for personalized coaching, want to
-            collaborate on a project, or need a speaker for your next event —
-            there&apos;s a place for us to connect.
-          </p>
-          <div className={styles.heroButtons}>
-            <a
-              href={calendlyUrl}
-              className={styles.btnPink}
-              target={settings?.calendlyUrl ? "_blank" : undefined}
-              rel={settings?.calendlyUrl ? "noopener noreferrer" : undefined}
-            >
-              Book a Discovery Call
-            </a>
-            <Link href="#contact" className={styles.btnOutline}>
-              Send a Message
-            </Link>
-          </div>
+      {/* ── 1. Hero ── */}
+      <div className={styles.hero}>
+        <div className={styles.eyebrow}>Work With Me</div>
+        <h1 className={styles.heroH1}>
+          Let&apos;s do something <em>meaningful.</em>
+        </h1>
+        <p className={styles.heroSub}>
+          Whether you&apos;re a survivor looking for gut health coaching, a brand that
+          shares our mission, or an organization ready to bring wellness to your
+          community — there&apos;s a way to work together.
+        </p>
+        <div className={styles.heroBtns}>
+          <a
+            href={calendlyUrl}
+            className={`${styles.heroBtn} ${styles.btnPink}`}
+            target={settings?.calendlyUrl ? "_blank" : undefined}
+            rel={settings?.calendlyUrl ? "noopener noreferrer" : undefined}
+          >
+            Book a discovery call
+          </a>
+          <a href="#form" className={`${styles.heroBtn} ${styles.btnOutline}`}>
+            Send an inquiry
+          </a>
         </div>
-      </section>
+      </div>
 
-      {/* -- 2. Ways to Work Grid -- */}
-      <section className={styles.waysSection}>
-        <h2 className={styles.waysSectionTitle}>Ways to Work Together</h2>
-
+      {/* ── 2. Ways to Work ── */}
+      <div className={styles.waysWrap}>
         <div className={styles.waysGrid}>
-          {/* Card 1 - Featured */}
           <div className={`${styles.wayCard} ${styles.wayCardFeatured}`}>
-            <div className={styles.wayCardEmoji}>🌿</div>
-            <span className={`${styles.tag} ${styles.tagPink}`}>
-              Most popular
-            </span>
-            <h3 className={styles.wayCardTitle}>Gut Health Coaching</h3>
-            <p className={styles.wayCardDesc}>
-              Personalized 1-on-1 coaching to help you restore your gut health
-              after treatment. Includes meal plans, supplement guidance, and
-              ongoing support tailored to your journey.
-            </p>
+            <div className={styles.wayIcon}>🌿</div>
+            <span className={`${styles.wayTag} ${styles.tagPink}`}>Most popular</span>
+            <div className={styles.wayH}>Gut Health Coaching</div>
+            <div className={styles.wayDesc}>
+              1:1 coaching for breast cancer survivors and women ready to heal their gut,
+              restore energy, and feel at home in their bodies again. Personalized protocols
+              for where you are in your journey.
+            </div>
+            <a href="#form" className={styles.wayCta}>Learn more &amp; apply →</a>
           </div>
-
-          {/* Card 2 */}
           <div className={styles.wayCard}>
-            <div className={styles.wayCardEmoji}>🎤</div>
-            <span className={`${styles.tag} ${styles.tagPurple}`}>
-              Engagements
-            </span>
-            <h3 className={styles.wayCardTitle}>Speaking &amp; Events</h3>
-            <p className={styles.wayCardDesc}>
-              Invite Luchi to speak at your conference, retreat, or community
-              event about survivorship, faith, and whole-body wellness.
-            </p>
+            <div className={styles.wayIcon}>🎤</div>
+            <span className={`${styles.wayTag} ${styles.tagPurple}`}>Engagements</span>
+            <div className={styles.wayH}>Speaking &amp; Events</div>
+            <div className={styles.wayDesc}>
+              Available for conferences, summits, health events, church groups, and community
+              programs focused on survivorship, wellness, gut health, and faith-grounded healing.
+            </div>
+            <a href="#form" className={styles.wayCta}>Inquire about speaking →</a>
           </div>
-
-          {/* Card 3 */}
           <div className={styles.wayCard}>
-            <div className={styles.wayCardEmoji}>🤝</div>
-            <span className={`${styles.tag} ${styles.tagTeal}`}>
-              Partnerships
-            </span>
-            <h3 className={styles.wayCardTitle}>
-              Brand &amp; Org Partnerships
-            </h3>
-            <p className={styles.wayCardDesc}>
-              Partner with Diary of a Breastie to amplify your mission through
-              authentic storytelling and our engaged, purpose-driven community.
-            </p>
+            <div className={styles.wayIcon}>🤝</div>
+            <span className={`${styles.wayTag} ${styles.tagTeal}`}>Partnerships</span>
+            <div className={styles.wayH}>Brand &amp; Org Partnerships</div>
+            <div className={styles.wayDesc}>
+              Partnering with aligned wellness brands, nonprofits, and organizations to bring
+              valuable resources to the Breastie community authentically and meaningfully.
+            </div>
+            <a href="#form" className={styles.wayCta}>Explore partnerships →</a>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* -- 3. Booking Section -- */}
-      <section id="booking" className={styles.bookingSection}>
+      {/* ── 3. Booking Section ── */}
+      <div className={styles.bookingWrap}>
         <div className={styles.bookingGrid}>
           <div className={styles.bookingLeft}>
-            <p className={styles.bookingEyebrow}>LET&apos;S CONNECT</p>
-            <h2 className={styles.bookingHeading}>
-              Book a free discovery call
-            </h2>
-            <p className={styles.bookingBody}>
-              Not sure where to start? Schedule a complimentary 20-minute call
-              to talk through your goals, ask questions, and see if we&apos;re
-              the right fit. No pressure — just real conversation.
-            </p>
+            <div className={styles.secEyebrow}>Start here</div>
+            <div className={styles.secH}>Book a free<br />discovery call</div>
+            <div className={styles.secBody}>
+              A free 20-minute conversation to explore gut health coaching, speaking
+              opportunities, or partnership possibilities — no pressure, just a chance to
+              connect and see if we&apos;re the right fit.
+            </div>
             <a
               href={calendlyUrl}
               className={styles.bookingBtn}
               target={settings?.calendlyUrl ? "_blank" : undefined}
               rel={settings?.calendlyUrl ? "noopener noreferrer" : undefined}
             >
-              Schedule a Call
+              Book your call →
             </a>
           </div>
-
           <div className={styles.bookingRight}>
-            <h3 className={styles.bookingRightHeading}>What to expect</h3>
-            <p className={styles.bookingRightBody}>
-              During your discovery call, we&apos;ll chat about where you are
-              in your wellness journey, what you&apos;re looking for, and how
-              we might work together. It&apos;s a relaxed, no-obligation
-              conversation designed to help you feel confident about your next
-              step — whether that&apos;s coaching, a partnership, or simply
-              getting pointed in the right direction.
-            </p>
+            <div className={styles.bookingNoteH}>What to expect</div>
+            <div className={styles.bookingNoteBody}>
+              This is a low-pressure conversation where we get to know each other, discuss
+              your goals, and figure out the best path forward — whether that&apos;s coaching,
+              a speaking engagement, or a brand collaboration. No commitment required.
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* -- 4. Contact Form -- */}
-      <section id="contact" className={styles.contactSection}>
-        <div className={styles.contactInner}>
-          <h2 className={styles.contactHeading}>Get in Touch</h2>
-          <p className={styles.contactSub}>
-            Fill out the form below and we&apos;ll get back to you within 48
-            hours.
-          </p>
-
-          <form className={styles.formGrid}>
-            <div className={styles.formGroup}>
-              <label className={styles.formLabel} htmlFor="firstName">
-                First Name
-              </label>
-              <input
-                id="firstName"
-                name="firstName"
-                type="text"
-                className={styles.formInput}
-                placeholder="Jane"
-                required
-              />
-            </div>
-
-            <div className={styles.formGroup}>
-              <label className={styles.formLabel} htmlFor="lastName">
-                Last Name
-              </label>
-              <input
-                id="lastName"
-                name="lastName"
-                type="text"
-                className={styles.formInput}
-                placeholder="Doe"
-                required
-              />
-            </div>
-
-            <div className={`${styles.formGroup} ${styles.formGroupFull}`}>
-              <label className={styles.formLabel} htmlFor="email">
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                className={styles.formInput}
-                placeholder="jane@example.com"
-                required
-              />
-            </div>
-
-            <div className={`${styles.formGroup} ${styles.formGroupFull}`}>
-              <label className={styles.formLabel} htmlFor="inquiryType">
-                Inquiry Type
-              </label>
-              <select
-                id="inquiryType"
-                name="inquiryType"
-                className={styles.formSelect}
-                defaultValue=""
-                required
-              >
-                <option value="" disabled>
-                  Select an option
-                </option>
-                <option value="coaching">Gut Health Coaching</option>
-                <option value="speaking">Speaking Engagement</option>
-                <option value="partnership">Brand Partnership</option>
-                <option value="podcast">Podcast Guest Inquiry</option>
-                <option value="general">General Question</option>
-              </select>
-            </div>
-
-            <div className={`${styles.formGroup} ${styles.formGroupFull}`}>
-              <label className={styles.formLabel} htmlFor="message">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                className={styles.formTextarea}
-                placeholder="Tell us a bit about what you're looking for..."
-                required
-              />
-            </div>
-
-            <button type="submit" className={styles.formSubmit}>
-              Send Message
-            </button>
-          </form>
+      {/* ── 4. Contact Form ── */}
+      <div id="form" className={styles.formSection}>
+        <div className={styles.secEyebrow}>Get in touch</div>
+        <div className={styles.formH}>Send a message</div>
+        <p className={styles.formSub}>
+          Prefer email? Fill out the form below and we&apos;ll get back to you within 2–3 business days.
+        </p>
+        <div className={styles.formGrid}>
+          <div>
+            <label className={styles.formLabel}>First name</label>
+            <input className={styles.formInput} type="text" placeholder="Your first name" />
+          </div>
+          <div>
+            <label className={styles.formLabel}>Last name</label>
+            <input className={styles.formInput} type="text" placeholder="Your last name" />
+          </div>
+          <div>
+            <label className={styles.formLabel}>Email address</label>
+            <input className={styles.formInput} type="email" placeholder="your@email.com" />
+          </div>
+          <div>
+            <label className={styles.formLabel}>Inquiry type</label>
+            <select className={styles.formInput} defaultValue="coaching">
+              <option value="coaching">Gut health coaching</option>
+              <option value="speaking">Speaking engagement</option>
+              <option value="brand">Brand partnership</option>
+              <option value="org">Organizational partnership</option>
+              <option value="general">General question</option>
+            </select>
+          </div>
+          <div className={styles.formFull}>
+            <label className={styles.formLabel}>Message</label>
+            <textarea
+              className={styles.formTextarea}
+              placeholder="Tell us a little about yourself and what you're looking for..."
+            />
+          </div>
+          <div className={styles.formFull}>
+            <button className={styles.formSubmit}>Send message →</button>
+          </div>
         </div>
-      </section>
+      </div>
 
       <Footer />
     </>
