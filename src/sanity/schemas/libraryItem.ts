@@ -39,6 +39,12 @@ export default defineType({
       type: "url",
     }),
     defineField({
+      name: "downloadFile",
+      title: "Download File (PDF, etc.)",
+      type: "file",
+      options: { accept: ".pdf,.doc,.docx,.xlsx" },
+    }),
+    defineField({
       name: "image",
       title: "Image (optional)",
       type: "image",
